@@ -8,7 +8,16 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="../css/PageStyle_NEFS.css">
     <link rel="stylesheet" type="text/css" href="../css/component.css">
-    <link rel="stylesheet" type="text/css" href="../css/default.css">    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../css/default.css">    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+    <!-- Page styles -->
+<link type='text/css' href='../css/demo.css' rel='stylesheet' media='screen' />
+
+<!-- OSX Style CSS files -->
+<link type='text/css' href='../css/osx.css' rel='stylesheet' media='screen' />
+
+
     <style>
     body{
       background-color: #34495e;
@@ -19,12 +28,40 @@
 <div class="hidden">
 
 <div class ="navBar_Container">
+    <div class="navBar_Item_Logo" style="float:left; color: #bdc3c7; font-size:20px;" >NE<span style="color: #7f8c8d;">FS</span></div>
     <div class ="navBar_Item_Logo"> Manage </div>
     <div class ="navBar_Item_Description"> Manage data </div>
 </div>
 
+<!-- ******************************** Modal Dialog ******************************** -->
+
+
+<div id='container'>  
+    <!-- modal content -->
+    <div id="osx-modal-content">
+      <div id="osx-modal-title">Dummy Dummy</div>
+      <div class="close"><a href="#" class="simplemodal-close">x</a></div>
+      <div id="osx-modal-data">
+        <h2>Hello! I'm SimpleModal!</h2>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p><button class="simplemodal-close">Close</button> <span>(or press ESC or click the overlay)</span></p>
+      </div>
+    </div>
+</div>
+<!-- Load JavaScript files -->
+<script type='text/javascript' src='../scripts/jquery.js'></script>
+<script type='text/javascript' src='../scripts/jquery.simplemodal.js'></script>
+<script type='text/javascript' src='../scripts/osx.js'></script>
+
+<!-- ******************************** Modal Dialog ******************************** -->
+
+
 <br>
 <br>
+<br>
+
 
 <table style="width:100%" id="table">
 <tr>
@@ -39,21 +76,22 @@
   <td>Tuesday December 2014, 05:27</td>		
   <td>Friday June 2014, 02:15</td>
   <td><input class="table_Link" type="button" value="Delete Row" onclick="SomeDeleteRowFunction(this);"></td>
-  <td><a class="edit_Row_bt" type="button" href="" /> edit</a></td>
+  <td><a href='#' class='osx edit_Row_bt' /> edit</a></td>
 </tr>
 <tr>
   <td class="categories_Cell">Sports</td>
   <td>Friday June 2014, 02:08</td>   
   <td>Friday June 2014, 17:30</td>
   <td><input class="table_Link" type="button" value="Delete Row" onclick="SomeDeleteRowFunction(this);"></td>
-  <td><a class="edit_Row_bt" type="button" href="" /> edit</a></td>
+  <!--<td><a class="edit_Row_bt" type="button" href="" /> edit</a></td>-->
+  <td><a href='#' class='osx edit_Row_bt' /> edit</a></td>
 </tr>
 <tr>
   <td class="categories_Cell">News</td>
   <td>Wednesday October 2014, 12:45</td>   
   <td>Friday June 2014, 09:50</td>
   <td><input class="table_Link" type="button" value="Delete Row" onclick="SomeDeleteRowFunction(this);"></td>
-  <td><a class="edit_Row_bt" type="button" href="" /> edit</a></td>
+  <td><a href='#' class='osx edit_Row_bt' /> edit</a></td>
 </tr>
 </table>
 

@@ -36,7 +36,25 @@ $(document).ready(function () {
 });
 
 
+/*
+jQuery(function($) {
+  
+  // Note that the div doesn't exist yet, so this won't
+  // hook it up
+  $(".test").click(function() {
+    display("Direct click handled on " +
+            this.innerHTML
+           );
+  });
+  
 
+  // This form uses event delegation. Note that the div
+  // still doesn't exist.
+  $("#table").delegate(".edit_Row_bt", "click", function() {
+    window.open("", "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=155, left=270, width=700, height=500");
+  });
+});
+*/
 
 
 
