@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="PageScript_NEFS.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="PageStyle_NEFS.css">
+    <link rel="stylesheet" type="text/css" href="component.css">
+    <link rel="stylesheet" type="text/css" href="default.css">
+
+</head>
+<body> 
+<div class="hidden">
+
+<div class ="navBar_Container">
+    <div class ="navBar_Item_Logo"> Events </div>
+    <div class ="navBar_Item_Description"> Add an events </div>
+</div>
+<br>
+<form class="cbp-mc-form">
+    <div class="cbp-mc-column">
+    </div>
+    <div class="cbp-mc-column">
+        <label for="title">Title</label>
+        <input type="text" id="eTitle" required>
+        <label for="Description">Description</label>
+        <textarea id="eDesc" ></textarea>
+        <label for="dateAndtime">Date/Time</label>
+        <input id ="eDate" type="datetime-local">
+        <label>Type</label>
+        <select id="eType">
+            <option selected="selected">Choose...</option>
+            <option>NEFS</option>
+            <option>Victoria Center</option>
+            <option>careers</option>
+            <option>social</option>
+        </select>
+        <label for="link">Link</label>
+        <input type="text" id="eLink">
+    </div>
+    <div class="cbp-mc-submit-wrap"><input class="cbp-mc-submit" type="submit" value="Send your data" /></div>
+    
+</form>
+
+</div>
+</body>
+</html>

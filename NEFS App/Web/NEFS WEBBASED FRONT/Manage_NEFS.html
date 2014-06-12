@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="PageScript_NEFS.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="PageStyle_NEFS.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <style>
+    body{
+      background-color: #34495e;
+    }
+    </style>
+</head>
+<body>
+<div class="hidden">
+
+<div class ="navBar_Container">
+    <div class ="navBar_Item_Logo"> Manage </div>
+    <div class ="navBar_Item_Description"> Manage data </div>
+</div>
+
+<br>
+<br>
+
+<table style="width:100%" id="table">
+<tr>
+  <th style="background-color:#7f8c8d;" height="70">Category</th>
+  <th>Created</th>		
+  <th>Last edited</th>
+  <th>Delete</th>
+  <th>Edit</th>
+</tr>
+<tr>
+  <td class="categories_Cell">Events</td>
+  <td>Tuesday December 2014, 05:27</td>		
+  <td>Friday June 2014, 02:15</td>
+  <td><input class="table_Link" type="button" value="Delete Row" onclick="SomeDeleteRowFunction(this);"></td>
+  <td><a class="edit_Row_bt" type="button" href="" /> edit</a></td>
+</tr>
+<tr>
+  <td class="categories_Cell">Sports</td>
+  <td>Friday June 2014, 02:08</td>   
+  <td>Friday June 2014, 17:30</td>
+  <td><input class="table_Link" type="button" value="Delete Row" onclick="SomeDeleteRowFunction(this);"></td>
+  <td><a class="edit_Row_bt" type="button" href="" /> edit</a></td>
+</tr>
+<tr>
+  <td class="categories_Cell">News</td>
+  <td>Wednesday October 2014, 12:45</td>   
+  <td>Friday June 2014, 09:50</td>
+  <td><input class="table_Link" type="button" value="Delete Row" onclick="SomeDeleteRowFunction(this);"></td>
+  <td><a class="edit_Row_bt" type="button" href="" /> edit</a></td>
+</tr>
+</table>
+
+</div>
+</body>
+</html>
