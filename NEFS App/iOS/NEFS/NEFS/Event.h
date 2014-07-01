@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Config.h"
 
-@interface Event : UITableViewCell
+@interface Event : NSObject
+
+@property (strong, nonatomic) NSString *_id;
+@property (strong, nonatomic) NSString *eTitle;
+@property (strong, nonatomic) NSString *eDesc;
+@property (strong, nonatomic) NSString *eDate;
+@property (strong, nonatomic) NSString *eStart;
+@property (strong, nonatomic) NSString *eEnd;
+@property (strong, nonatomic) NSString *eLink;
+@property (strong, nonatomic) NSString *eEvent;
+
+- (NSString*) getIconName;
 
 @end

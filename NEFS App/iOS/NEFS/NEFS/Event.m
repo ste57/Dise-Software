@@ -10,25 +10,32 @@
 
 @implementation Event
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
+@synthesize eEvent;
+
+- (NSString*) getIconName {
+    
+    if ([eEvent isEqual:NEFS_API_NAME]) {
+    
+        return NEFS_ICON;
+        
+    } else if ([eEvent isEqual:VICTORIA_CENTRE_API_NAME]) {
+        
+        return VICTORIA_CENTRE_ICON;
+        
+    } else if ([eEvent isEqualToString:CAREERS_API_NAME]) {
+        
+        return CAREERS_ICON;
+        
+    } else if ([eEvent isEqualToString:SOCIAL_API_NAME]) {
+        
+        return SOCIAL_ICON;
+        
+    } else if ([eEvent isEqualToString:SPORTS_API_NAME]) {
+        
+        return SPORTS_ICON;
     }
-    return self;
-}
-
-- (void)awakeFromNib
-{
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    
+    return NULL;
 }
 
 @end

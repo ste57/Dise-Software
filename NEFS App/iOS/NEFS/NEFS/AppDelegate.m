@@ -28,46 +28,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
-    
-    UIColor *barColour = [UIColor colorWithRed:TAB_COLOUR_R/255.0 green:TAB_COLOUR_G/255.0 blue:TAB_COLOUR_B/255.0 alpha:1.0];
-    
     tabBar = [[UITabBarController alloc] init];
     tabArray = [[NSMutableArray alloc] init];
     
-    // Events Tab
+    UIColor *barColour = [UIColor colorWithRed:TAB_COLOUR_R/255.0 green:TAB_COLOUR_G/255.0 blue:TAB_COLOUR_B/255.0 alpha:1.0];
     
-    events = [[EventsTab alloc] init];
-    events.title = EVENTS;
-    events.tabBarItem.image = [UIImage imageNamed:EVENTS_IMG];
-    [self addNavigationBar:events withColour:barColour];
+    // Add Tabs
     
-    // News Tab
+    [self addEventsTab:barColour];
     
-    news = [[NewsTab alloc] init];
-    news.title = NEWS;
-    news.tabBarItem.image = [UIImage imageNamed:NEWS_IMG];
-    [self addNavigationBar:news withColour:barColour];
+    [self addNewsTab:barColour];
     
-    // Sports Tab
+    [self addSportsTab:barColour];
     
-    sports = [[SportsTab alloc] init];
-    sports.title = SPORTS;
-    sports.tabBarItem.image = [UIImage imageNamed:SPORTS_IMG];
-    [self addNavigationBar:sports withColour:barColour];
-
-    // Info Tab
+    [self addInfoTab:barColour];
     
-    info = [[InfoTab alloc] init];
-    info.title = INFO;
-    info.tabBarItem.image = [UIImage imageNamed:INFO_IMG];
-    [self addNavigationBar:info withColour:barColour];
-    
-    // Add Tab To Window
+    // Add Tab To Main Window
     
     tabBar.viewControllers = tabArray;
 
@@ -78,8 +59,42 @@
     [self.window setRootViewController:tabBar];
     
     [self.window makeKeyAndVisible];
+
+    application.applicationIconBadgeNumber = 0;
     
     return YES;
+}
+
+- (void) addEventsTab:(UIColor*)colour {
+    
+    events = [[EventsTab alloc] init];
+    events.title = EVENTS;
+    events.tabBarItem.image = [UIImage imageNamed:EVENTS_IMG];
+    [self addNavigationBar:events withColour:colour];
+}
+
+- (void) addNewsTab:(UIColor*)colour {
+    
+    news = [[NewsTab alloc] init];
+    news.title = NEWS;
+    news.tabBarItem.image = [UIImage imageNamed:NEWS_IMG];
+    [self addNavigationBar:news withColour:colour];
+}
+
+- (void) addSportsTab:(UIColor*)colour {
+    
+    sports = [[SportsTab alloc] init];
+    sports.title = SPORTS;
+    sports.tabBarItem.image = [UIImage imageNamed:SPORTS_IMG];
+    [self addNavigationBar:sports withColour:colour];
+}
+
+- (void) addInfoTab:(UIColor*)colour {
+    
+    info = [[InfoTab alloc] init];
+    info.title = INFO;
+    info.tabBarItem.image = [UIImage imageNamed:INFO_IMG];
+    [self addNavigationBar:info withColour:colour];
 }
 
 - (void) addNavigationBar:(UIViewController*)view withColour:(UIColor*)colour {
@@ -87,9 +102,18 @@
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:view];
     
     navController.navigationBar.barTintColor = colour;
+    navController.navigationBar.tintColor = [UIColor whiteColor];
     navController.navigationBar.barStyle = UIBarStyleBlack;
     
+    //navController.navigationBar.topItem.title = @"";
+    
     [tabArray addObject:navController];
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+
+    // Set icon badge number to zero
+    application.applicationIconBadgeNumber = 0;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -102,6 +126,8 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -117,6 +143,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 @end
