@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NEFS</string>
+    <string name="title_section1">Events</string>
+    <string name="title_section2">News</string>
+    <string name="title_section3">Sports</string>
+    <string name="title_section4">Info</string>
+    <string name="action_settings">Settings</string>
+    <string name="empty_events_label">No Upcoming Events!</string>
+	<string name="empty_news_label">No news!</string>
+	<string name="empty_sports_label">No Sports Teams!</string>
+	<string name="empty_info_label">No Information!</string>
+</resources>

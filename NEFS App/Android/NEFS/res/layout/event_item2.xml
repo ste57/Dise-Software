@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeightLarge" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/bg_card" >
+
+        <TextView
+            android:id="@+id/monthLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="4.5sp"
+            android:text="Apr"
+            android:textColor="@color/grey_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/dayLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/monthLabel"
+            android:layout_below="@+id/monthLabel"
+            android:text="10"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/EventTitleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/dayLabel"
+            android:layout_alignLeft="@+id/eventTimeLabel"
+            android:text="Morgan Stanley talk blaaefffdfgsgf"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/eventTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/eventStatus"
+            android:layout_alignTop="@+id/dayLabel"
+            android:text="18:30"
+            android:textSize="11sp"
+            android:textColor="@color/grey_color" />
+
+        <TextView
+            android:id="@+id/eventStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/eventTimeLabel"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/dayLabel"
+            android:text="going"
+            android:textSize="11.5sp"
+            android:textColor="@color/text_color1" />
+
+    </RelativeLayout>
+
+</FrameLayout>
