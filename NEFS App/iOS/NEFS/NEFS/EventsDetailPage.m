@@ -8,6 +8,11 @@
 
 #import "EventsDetailPage.h"
 
+#define EVENT_TYPE_WIDTH 100
+
+#define EVENT_TYPE_HEIGHT 106//78
+#define EVENT_DATE_HEIGHT 64//100
+
 @implementation EventsDetailPage {
     
     UILabel *dateLabel;
@@ -15,9 +20,11 @@
     UIButton *siteButton, *attendButton;
     UIActivityIndicatorView *loadIndicator;
     NSMutableArray *eventsAttending;
+    
+    UIImageView *icon;
 }
 
-@synthesize event,eId,scheduledLocalNotifications;
+@synthesize event,eId;
 
 - (void) viewDidLoad {
     
@@ -42,9 +49,10 @@
 
 - (void) createDateLabel {
     
-    dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 70.0, 290.0, 45.0)];
+    dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, EVENT_DATE_HEIGHT, 290.0, 45.0)];
+    //dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, EVENT_DATE_HEIGHT, 290.0, 45.0)];
     dateLabel.textAlignment = NSTextAlignmentLeft;
-    dateLabel.textColor = [UIColor colorWithRed:0.14 green:0.16 blue:0.53 alpha:1.0];
+    dateLabel.textColor = [UIColor darkGrayColor];//[UIColor colorWithRed:0.14 green:0.16 blue:0.53 alpha:1.0];
     dateLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:DATE_FONT_SIZE];
     
     [self.view addSubview:dateLabel];
@@ -141,9 +149,9 @@
 
 - (void) localNotification:(BOOL)addNotification {
 
-    [self addTimeForNotification:(FIRST_NOTIFICATION_TIME_HOURS*3600) :FIRST_NOTIFICATION_TEXT :addNotification];
+    [self addTimeForNotification:(FIRST_NOTIFICATION_TIME_HOURS*3600) :[NSString stringWithFormat:@"%@%@%@",event.eTitle, FIRST_NOTIFICATION_TEXT, event.eStart] :addNotification];
     
-    [self addTimeForNotification:(SECOND_NOTIFICATION_TIME_HOURS*3600) :SECOND_NOTIFICATION_TEXT :addNotification];
+    [self addTimeForNotification:(SECOND_NOTIFICATION_TIME_HOURS*3600) :[NSString stringWithFormat:@"%@%@",event.eTitle, SECOND_NOTIFICATION_TEXT] :addNotification];
 }
 
 - (void) addTimeForNotification:(double)time :(NSString*)text :(BOOL)addNotification {
@@ -161,7 +169,7 @@
     
         notification.soundName = @"sound.caf";
     
-        notification.alertBody = [NSString stringWithFormat:@"%@%@%@",event.eTitle, text, event.eStart];
+        notification.alertBody = text;
     
         notification.applicationIconBadgeNumber = 1;
     
@@ -178,7 +186,7 @@
 
 - (void) createDescription {
 
-    descriptionView = [[UITextView alloc] initWithFrame:CGRectMake(10.0, 115.0, 300.0, siteButton.center.y - 155)];
+    descriptionView = [[UITextView alloc] initWithFrame:CGRectMake(10.0, 145.0, 300.0, siteButton.center.y - 185)];
     
     [self.view addSubview:descriptionView];
 
@@ -186,9 +194,49 @@
 
     descriptionView.font = [UIFont fontWithName:@"TrebuchetMS" size:DESCRIPTION_FONT_SIZE];
     
-    descriptionView.textColor = [UIColor blackColor];
+    descriptionView.textColor = [UIColor grayColor];
     
     descriptionView.editable = NO;
+}
+
+- (void) addEventTypeLabel {
+    
+    CGRect frame;
+    
+    icon = [[UIImageView alloc] init];
+    frame = CGRectMake(15.0, EVENT_TYPE_HEIGHT, EVENT_TYPE_WIDTH, 25);
+    
+    UIImage *image = [UIImage imageNamed:MAIN_EVENT_TYPE_ICON];
+    
+    CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextClipToMask(context, rect, image.CGImage);
+    CGContextSetFillColorWithColor(context, [[event getIconColour] CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UIImage *flippedImage = [UIImage imageWithCGImage:img.CGImage
+                                                scale:1.0 orientation: UIImageOrientationDownMirrored];
+    
+    icon.image = flippedImage;
+    icon.frame = frame;
+    
+    [self.view addSubview:icon];
+    
+    
+    
+    UILabel *eventTypeLabel = [[UILabel alloc] init];
+    eventTypeLabel.textAlignment = NSTextAlignmentCenter;
+    eventTypeLabel.font = [UIFont systemFontOfSize:12];
+    eventTypeLabel.textColor = [UIColor whiteColor];
+    eventTypeLabel.text = event.eEvent;
+    
+    [self.view addSubview:eventTypeLabel];
+    
+    frame = CGRectMake(icon.frame.origin.x, icon.frame.origin.y, EVENT_TYPE_WIDTH, 25);
+    eventTypeLabel.frame = frame;
 }
 
 - (void) createDisplay {
@@ -255,6 +303,14 @@
     descriptionView.text = event.eDesc;
     
     [self checkIfEventIsBeingAttended];
+    
+    if ([event.eLink isEqualToString:@""]) {
+        
+        siteButton.highlighted = YES;
+        siteButton.enabled = NO;
+    }
+    
+    [self addEventTypeLabel];
 }
 
 - (void) createNavigationBarTitle {

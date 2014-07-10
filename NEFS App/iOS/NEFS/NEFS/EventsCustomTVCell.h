@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Event.h"
 
-@interface CustomTableViewCell : UITableViewCell
+@interface EventsCustomTVCell : UITableViewCell
 
 @property(nonatomic,retain) Event *event;
 @property(nonatomic,retain) NSString *eId;

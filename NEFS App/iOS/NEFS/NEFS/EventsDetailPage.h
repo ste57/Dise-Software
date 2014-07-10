@@ -15,8 +15,6 @@
 @property(nonatomic,retain) Event *event;
 @property(nonatomic,retain) NSString *eId;
 
-@property(nonatomic,copy) NSArray *scheduledLocalNotifications;
-
 - (void) createTextData;
 
 @end

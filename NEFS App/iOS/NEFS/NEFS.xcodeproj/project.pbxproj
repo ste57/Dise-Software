@@ -24,7 +24,7 @@
 		DCB5F905195A0EDC00CEA2EA /* InfoTab.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB5F904195A0EDC00CEA2EA /* InfoTab.m */; };
 		DCB5F908195A0EEF00CEA2EA /* SportsTab.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB5F907195A0EEF00CEA2EA /* SportsTab.m */; };
 		DCB5F90B195A0F1A00CEA2EA /* NewsTab.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB5F90A195A0F1A00CEA2EA /* NewsTab.m */; };
-		DCB5F90E195A0F4A00CEA2EA /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB5F90D195A0F4A00CEA2EA /* CustomTableViewCell.m */; };
+		DCB5F90E195A0F4A00CEA2EA /* EventsCustomTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB5F90D195A0F4A00CEA2EA /* EventsCustomTVCell.m */; };
 		DCB5F914195A102900CEA2EA /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB5F913195A102900CEA2EA /* Event.m */; };
 /* End PBXBuildFile section */
 
@@ -66,8 +66,8 @@
 		DCB5F907195A0EEF00CEA2EA /* SportsTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SportsTab.m; sourceTree = "<group>"; };
 		DCB5F909195A0F1A00CEA2EA /* NewsTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTab.h; sourceTree = "<group>"; };
 		DCB5F90A195A0F1A00CEA2EA /* NewsTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTab.m; sourceTree = "<group>"; };
-		DCB5F90C195A0F4A00CEA2EA /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
-		DCB5F90D195A0F4A00CEA2EA /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		DCB5F90C195A0F4A00CEA2EA /* EventsCustomTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsCustomTVCell.h; sourceTree = "<group>"; };
+		DCB5F90D195A0F4A00CEA2EA /* EventsCustomTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsCustomTVCell.m; sourceTree = "<group>"; };
 		DCB5F912195A102800CEA2EA /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		DCB5F913195A102900CEA2EA /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +182,8 @@
 				DCB5F8FD195A0E8B00CEA2EA /* EventsTab.m */,
 				DC525B2E195C5B720039AEE5 /* EventsDetailPage.h */,
 				DC525B2F195C5B720039AEE5 /* EventsDetailPage.m */,
+				DCB5F90C195A0F4A00CEA2EA /* EventsCustomTVCell.h */,
+				DCB5F90D195A0F4A00CEA2EA /* EventsCustomTVCell.m */,
 			);
 			name = Events;
 			sourceTree = "<group>";
@@ -213,19 +215,9 @@
 			name = News;
 			sourceTree = "<group>";
 		};
-		DCB5F90F195A0F4D00CEA2EA /* CustomTableCell */ = {
-			isa = PBXGroup;
-			children = (
-				DCB5F90C195A0F4A00CEA2EA /* CustomTableViewCell.h */,
-				DCB5F90D195A0F4A00CEA2EA /* CustomTableViewCell.m */,
-			);
-			name = CustomTableCell;
-			sourceTree = "<group>";
-		};
 		DCB5F910195A0F6400CEA2EA /* Help Files */ = {
 			isa = PBXGroup;
 			children = (
-				DCB5F90F195A0F4D00CEA2EA /* CustomTableCell */,
 			);
 			name = "Help Files";
 			sourceTree = "<group>";
@@ -330,7 +322,7 @@
 			files = (
 				DC525B30195C5B720039AEE5 /* EventsDetailPage.m in Sources */,
 				DCB5F8DB195A0CCA00CEA2EA /* AppDelegate.m in Sources */,
-				DCB5F90E195A0F4A00CEA2EA /* CustomTableViewCell.m in Sources */,
+				DCB5F90E195A0F4A00CEA2EA /* EventsCustomTVCell.m in Sources */,
 				DCB5F908195A0EEF00CEA2EA /* SportsTab.m in Sources */,
 				DCB5F8FE195A0E8B00CEA2EA /* EventsTab.m in Sources */,
 				DCB5F914195A102900CEA2EA /* Event.m in Sources */,
@@ -457,7 +449,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NEFS/NEFS-Prefix.pch";
 				INFOPLIST_FILE = "NEFS/NEFS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -473,7 +465,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NEFS/NEFS-Prefix.pch";
 				INFOPLIST_FILE = "NEFS/NEFS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

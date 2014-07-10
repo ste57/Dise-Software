@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "events.png"
+      "filename" : "ball.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "events@2x.png"
+      "filename" : "ball@2x.png"
     }
   ],
   "info" : {

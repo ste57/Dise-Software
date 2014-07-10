@@ -8,11 +8,12 @@
 
 // EVENTS TAB
 
-#define CELL_HEIGHT 80
-#define EVENTS_URL @"http://76ae3f9.ngrok.com/eventlist"
+#define CELL_HEIGHT 120//80
+#define EVENTS_URL @"http://nefs.herokuapp.com/eventlist"
 #define EVENTS_API_HEADER @"Events"
 #define SECTION_HEADER_DATE_FORMAT @"d MMM yyyy"//@"EEEE, d MMM";
 #define ATTENDING_EVENTS @"eventsAttending"
+#define NO_EVENTS_TEXT @"No Upcoming Events"
 
 // Detail Event Page
 
@@ -25,7 +26,7 @@
 #define FIRST_NOTIFICATION_TEXT @" is about to start at "
 
 #define SECOND_NOTIFICATION_TIME_HOURS 168
-#define SECOND_NOTIFICATION_TEXT @" is start"
+#define SECOND_NOTIFICATION_TEXT @" - 1 week to go!"
 
 // Names
 
@@ -35,14 +36,10 @@
 #define SOCIAL_API_NAME @"Social"
 #define SPORTS_API_NAME @"Sports"
 
-// Icons
+// Icon
 
-#define NEFS_ICON @"Events"
-#define VICTORIA_CENTRE_ICON @"Events"
-#define CAREERS_ICON @"Sports"
-#define SOCIAL_ICON @"Info"
-#define SPORTS_ICON @"Events"
-
+#define MAIN_EVENT_TYPE_ICON @"EventButtonHighlight"
+#define ATTEND_ICON @"Attend"
 
 // Image Names
 

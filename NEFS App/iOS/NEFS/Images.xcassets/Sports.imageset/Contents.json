@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "medal-1.png"
+      "filename" : "sports.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "medal.png"
+      "filename" : "sports@2x.png"
     }
   ],
   "info" : {

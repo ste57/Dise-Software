@@ -20,6 +20,6 @@
 @property (strong, nonatomic) NSString *eLink;
 @property (strong, nonatomic) NSString *eEvent;
 
-- (NSString*) getIconName;
+- (UIColor*) getIconColour;
 
 @end

@@ -12,27 +12,27 @@
 
 @synthesize eEvent;
 
-- (NSString*) getIconName {
+- (UIColor*) getIconColour {
     
     if ([eEvent isEqual:NEFS_API_NAME]) {
     
-        return NEFS_ICON;
+        return [UIColor colorWithRed:0.62 green:0.61 blue:0.93 alpha:1.0];
         
     } else if ([eEvent isEqual:VICTORIA_CENTRE_API_NAME]) {
         
-        return VICTORIA_CENTRE_ICON;
+        return [UIColor colorWithRed:0.93 green:0.61 blue:0.93 alpha:1.0];
         
     } else if ([eEvent isEqualToString:CAREERS_API_NAME]) {
         
-        return CAREERS_ICON;
+        return [UIColor colorWithRed:0.61 green:0.93 blue:0.67 alpha:1.0];
         
     } else if ([eEvent isEqualToString:SOCIAL_API_NAME]) {
         
-        return SOCIAL_ICON;
+        return [UIColor colorWithRed:0.93 green:0.81 blue:0.61 alpha:1.0];
         
     } else if ([eEvent isEqualToString:SPORTS_API_NAME]) {
         
-        return SPORTS_ICON;
+        return [UIColor colorWithRed:0.93 green:0.61 blue:0.61 alpha:1.0];
     }
     
     return NULL;
