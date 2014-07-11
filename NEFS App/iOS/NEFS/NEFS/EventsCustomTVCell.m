@@ -32,13 +32,15 @@
     UILabel *monthLabel;
     UILabel *dateLabel;
     
+    NSString *eId;
+    
     UIImageView *icon;
     UIImageView *attendIcon;
     
     NSMutableArray *eventsAttending;
 }
 
-@synthesize event,eId;
+@synthesize event;
 
 - (id) initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)reuseIdentifier {
     
@@ -126,7 +128,8 @@
     [self.contentView addSubview:seperator];
     
     UIView *bgColorView = [[UIView alloc] init];
-    bgColorView.backgroundColor = [UIColor colorWithRed:220.0/250.0 green:220.0/250.0 blue:220.0/250.0 alpha:1.0];
+    //bgColorView.backgroundColor = [UIColor colorWithRed:220.0/250.0 green:220.0/250.0 blue:220.0/250.0 alpha:1.0];
+    bgColorView.backgroundColor = [UIColor colorWithRed:230.0/250.0 green:230.0/250.0 blue:230.0/250.0 alpha:1.0];
     
     [self setSelectedBackgroundView: bgColorView];
 }
@@ -210,7 +213,7 @@
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextClipToMask(context, rect, image.CGImage);
-    CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:(TAB_COLOUR_R+20)/255.0 green:(TAB_COLOUR_G+20)/255.0 blue:(TAB_COLOUR_B+20)/255.0 alpha:1.0] CGColor]);
+    CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:(TAB_COLOUR_R+30)/255.0 green:(TAB_COLOUR_G+30)/255.0 blue:(TAB_COLOUR_B+30)/255.0 alpha:1.0] CGColor]);
     CGContextFillRect(context, rect);
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();

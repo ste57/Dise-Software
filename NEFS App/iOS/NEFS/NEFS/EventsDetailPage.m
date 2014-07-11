@@ -10,8 +10,8 @@
 
 #define EVENT_TYPE_WIDTH 100
 
-#define EVENT_TYPE_HEIGHT 106//78
-#define EVENT_DATE_HEIGHT 64//100
+#define EVENT_TYPE_HEIGHT 106
+#define EVENT_DATE_HEIGHT 64
 
 @implementation EventsDetailPage {
     
@@ -30,9 +30,17 @@
     
     [super viewDidLoad];
     
+    [self removeBackButtonText];
+    
     [self retrieveAttendingEvents];
     
     [self createDisplay];
+}
+
+- (void) removeBackButtonText {
+    
+    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self.navigationItem setBackBarButtonItem:backButtonItem];
 }
 
 - (void) retrieveAttendingEvents {
@@ -50,9 +58,8 @@
 - (void) createDateLabel {
     
     dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, EVENT_DATE_HEIGHT, 290.0, 45.0)];
-    //dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, EVENT_DATE_HEIGHT, 290.0, 45.0)];
     dateLabel.textAlignment = NSTextAlignmentLeft;
-    dateLabel.textColor = [UIColor darkGrayColor];//[UIColor colorWithRed:0.14 green:0.16 blue:0.53 alpha:1.0];
+    dateLabel.textColor = [UIColor darkGrayColor];
     dateLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:DATE_FONT_SIZE];
     
     [self.view addSubview:dateLabel];
@@ -252,37 +259,15 @@
 
 - (void) goToMainSite {
     
-    NSURL *url = [NSURL URLWithString:event.eLink];
-
-    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
-
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0,64,self.view.bounds.size.width,self.view.bounds.size.height-113)];
+    CustomWebView *web = [[CustomWebView alloc] init];
     
-    [self.view addSubview:webView];
+    [self.navigationController pushViewController:web animated:YES];
     
-    webView.delegate = self;
+    web.title = event.eTitle;
     
-    webView.scalesPageToFit = YES;
-
-    [webView loadRequest:requestObj];
+    web.websiteLink = event.eLink;
     
-    [self setActivityIndicator];
-}
-
-- (void) setActivityIndicator {
-    
-    loadIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    
-    loadIndicator.center = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2);
-    
-    [loadIndicator startAnimating];
-    
-    [self.view addSubview:loadIndicator];
-}
-
-- (void) webViewDidFinishLoad:(UIWebView *)webView {
-    
-    [loadIndicator removeFromSuperview];
+    [web loadWebsite];
 }
 
 - (void) createTextData {
@@ -314,7 +299,7 @@
 }
 
 - (void) createNavigationBarTitle {
-
+ 
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 40)];
     label.text = self.navigationItem.title;
 

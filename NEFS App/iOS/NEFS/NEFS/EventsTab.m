@@ -16,8 +16,7 @@
     
     UITableView *tableView;
     
-    NSMutableArray *eventsArray, *eventsAttending;//, *days;
-    //NSDictionary *groupedEvents;
+    NSMutableArray *eventsArray, *eventsAttending;
     
     BOOL dataRetrieved;
     UILabel *noEventsLabel;
@@ -28,8 +27,6 @@
     [super viewDidLoad];
     
     dataRetrieved = NO;
-    
-    [[NSUserDefaults standardUserDefaults] setObject:NULL forKey:EVENTS];
     
     [self removeBackButtonText];
     
@@ -47,8 +44,6 @@
 - (void) getEventsData {
     
     eventsArray = [[NSMutableArray alloc] init];
-    //days = [[NSMutableArray alloc] init];
-    //groupedEvents = [NSMutableDictionary dictionary];
     eventsAttending = [[NSMutableArray alloc] init];
     
     [self retrieveAttendingEvents];
@@ -105,8 +100,8 @@
                     
                     dataRetrieved = YES;
                     
-                    [[NSUserDefaults standardUserDefaults] setObject:events forKey:EVENTS];
-                    //[[NSUserDefaults standardUserDefaults] setObject:upcomingEvents forKey:EVENTS];
+                    //[[NSUserDefaults standardUserDefaults] setObject:events forKey:EVENTS];
+                    [[NSUserDefaults standardUserDefaults] setObject:upcomingEvents forKey:EVENTS];
                     [[NSUserDefaults standardUserDefaults] synchronize];
                     
                     [self refreshTable];
@@ -122,56 +117,35 @@
     
         [self retrieveFromURL];
         
-    } else {
-        
-        if (tableView) {
-            
-            [tableView reloadData];
-            
-        }
+    }
+    
+    if (tableView) {
+
+        [tableView reloadData];
     }
 }
 
 - (void) refreshTable {
     
     [self retrieveAttendingEvents];
-    
-    NSMutableArray *tempArray = (NSMutableArray *)[[NSUserDefaults standardUserDefaults] objectForKey:EVENTS];
-    
-    NSLog(@"\n\nCount = %lu\n\n",(unsigned long)tempArray.count);
-    
-    NSLog(@"\n\nArray Count = %lu\n\n",(unsigned long)eventsArray.count);
-    
-    
+
     [self createEventsFromData];
     
     [self sortDataIntoSections];
-    
 
     [noEventsLabel performSelectorOnMainThread:@selector(removeFromSuperview) withObject:nil waitUntilDone:NO];
-
-    
-    
-    
-    
-    
-    
     [tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
 }
 
 - (void) createNoEventsLabel {
     
-    noEventsLabel = [[UILabel alloc] initWithFrame:CGRectMake(85.0, 100.0, 200.0, 45.0)];
+    noEventsLabel = [[UILabel alloc] initWithFrame:CGRectMake(85.0, NO_ACCESS_LABEL_HEIGHT, 200.0, 45.0)];
     noEventsLabel.textAlignment = NSTextAlignmentLeft;
-    noEventsLabel.textColor = [UIColor darkGrayColor];//[UIColor colorWithRed:0.14 green:0.16 blue:0.53 alpha:1.0];
+    noEventsLabel.textColor = [UIColor darkGrayColor];
     noEventsLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:16];
     noEventsLabel.text = NO_EVENTS_TEXT;
     
-   // [self.navigationController addChildViewController:noEvents];
-    
-    
     [self.view addSubview:noEventsLabel];
-    //[self.view addSubview:noEvents];
 }
 
 - (void) createEventsFromData {
@@ -237,42 +211,16 @@
 
 - (void) sortDataIntoSections {
     
-    // Sort events by time
-    
     NSSortDescriptor *sortDescriptor;
     sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"eDate"
                                                  ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
     eventsArray = (NSMutableArray*)[eventsArray sortedArrayUsingDescriptors:sortDescriptors];
-    
-    // sort events by day
-    
-    /*  NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-     [dateFormat setDateFormat:@"yyyy-MM-d"];
-     
-     for (Event *event in eventsArray) {
-     
-     NSDate *date = [dateFormat dateFromString:event.eDate];
-     
-     if (![days containsObject:date]) {
-     
-     [days addObject:date];
-     [groupedEvents setValue:[NSMutableArray arrayWithObject:event] forKey:(NSString*)date];
-     
-     } else {
-     
-     [((NSMutableArray*)[groupedEvents objectForKey:date]) addObject:event];
-     }
-     }
-     
-     days = [[days sortedArrayUsingSelector:@selector(compare:)] mutableCopy];*/
 }
 
 - (void) createTableView {
     
     CGRect window = [[UIScreen mainScreen] bounds];
-    
-    // tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64.0, window.size.width, window.size.height-113.0) style:UITableViewStylePlain];
     
     tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, window.size.width, window.size.height) style:UITableViewStylePlain];
     
@@ -286,10 +234,6 @@
     
     [self.view addSubview:tableView];
     
-    /*if ([tableView respondsToSelector:@selector(setSeparatorInset:)]) {
-     [tableView setSeparatorInset:UIEdgeInsetsZero];
-     }*/
-    
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.backgroundColor = [UIColor colorWithRed:220.0/250.0 green:220.0/250.0 blue:220.0/250.0 alpha:1.0];
     
@@ -297,11 +241,6 @@
         
         [self createNoEventsLabel];
     }
-}
-
-- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
-    
-    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -357,6 +296,7 @@
 }
 
 - (void) didReceiveMemoryWarning {
+    
     [super didReceiveMemoryWarning];
 }
 

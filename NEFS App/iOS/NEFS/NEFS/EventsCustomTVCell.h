@@ -12,7 +12,6 @@
 @interface EventsCustomTVCell : UITableViewCell
 
 @property(nonatomic,retain) Event *event;
-@property(nonatomic,retain) NSString *eId;
 
 - (void) createTextData;
 

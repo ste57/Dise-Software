@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC028F78196EF122006BD8DA /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC028F77196EF122006BD8DA /* NewsCell.m */; };
+		DC028F7B196EF1A0006BD8DA /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = DC028F7A196EF1A0006BD8DA /* News.m */; };
+		DC028F7E196F305E006BD8DA /* CustomWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC028F7D196F305E006BD8DA /* CustomWebView.m */; };
 		DC033A2A195F24260061FC2B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC033A29195F24260061FC2B /* Images.xcassets */; };
 		DC525B30195C5B720039AEE5 /* EventsDetailPage.m in Sources */ = {isa = PBXBuildFile; fileRef = DC525B2F195C5B720039AEE5 /* EventsDetailPage.m */; };
 		DCB5F8CB195A0CCA00CEA2EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB5F8CA195A0CCA00CEA2EA /* Foundation.framework */; };
@@ -39,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC028F76196EF122006BD8DA /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		DC028F77196EF122006BD8DA /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
+		DC028F79196EF1A0006BD8DA /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		DC028F7A196EF1A0006BD8DA /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		DC028F7C196F305E006BD8DA /* CustomWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomWebView.h; sourceTree = "<group>"; };
+		DC028F7D196F305E006BD8DA /* CustomWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomWebView.m; sourceTree = "<group>"; };
 		DC033A29195F24260061FC2B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DC525B2E195C5B720039AEE5 /* EventsDetailPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDetailPage.h; sourceTree = "<group>"; };
 		DC525B2F195C5B720039AEE5 /* EventsDetailPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsDetailPage.m; sourceTree = "<group>"; };
@@ -135,8 +144,8 @@
 				DCB5F8D9195A0CCA00CEA2EA /* AppDelegate.h */,
 				DCB5F8DA195A0CCA00CEA2EA /* AppDelegate.m */,
 				DCB5F8FF195A0E9000CEA2EA /* Events */,
-				DCB5F900195A0E9500CEA2EA /* Info */,
 				DCB5F902195A0E9F00CEA2EA /* News */,
+				DCB5F900195A0E9500CEA2EA /* Info */,
 				DCB5F901195A0E9A00CEA2EA /* Sports */,
 				DCB5F910195A0F6400CEA2EA /* Help Files */,
 			);
@@ -209,8 +218,12 @@
 		DCB5F902195A0E9F00CEA2EA /* News */ = {
 			isa = PBXGroup;
 			children = (
+				DC028F79196EF1A0006BD8DA /* News.h */,
+				DC028F7A196EF1A0006BD8DA /* News.m */,
 				DCB5F909195A0F1A00CEA2EA /* NewsTab.h */,
 				DCB5F90A195A0F1A00CEA2EA /* NewsTab.m */,
+				DC028F76196EF122006BD8DA /* NewsCell.h */,
+				DC028F77196EF122006BD8DA /* NewsCell.m */,
 			);
 			name = News;
 			sourceTree = "<group>";
@@ -218,6 +231,8 @@
 		DCB5F910195A0F6400CEA2EA /* Help Files */ = {
 			isa = PBXGroup;
 			children = (
+				DC028F7C196F305E006BD8DA /* CustomWebView.h */,
+				DC028F7D196F305E006BD8DA /* CustomWebView.m */,
 			);
 			name = "Help Files";
 			sourceTree = "<group>";
@@ -326,8 +341,11 @@
 				DCB5F908195A0EEF00CEA2EA /* SportsTab.m in Sources */,
 				DCB5F8FE195A0E8B00CEA2EA /* EventsTab.m in Sources */,
 				DCB5F914195A102900CEA2EA /* Event.m in Sources */,
+				DC028F7E196F305E006BD8DA /* CustomWebView.m in Sources */,
 				DCB5F8D7195A0CCA00CEA2EA /* main.m in Sources */,
 				DCB5F90B195A0F1A00CEA2EA /* NewsTab.m in Sources */,
+				DC028F78196EF122006BD8DA /* NewsCell.m in Sources */,
+				DC028F7B196EF1A0006BD8DA /* News.m in Sources */,
 				DCB5F905195A0EDC00CEA2EA /* InfoTab.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

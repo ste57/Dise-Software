@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "News.h"
+#import "Config.h"
+#import "NewsCell.h"
+#import "CustomWebView.h"
 
-@interface NewsTab : UIViewController
+@interface NewsTab : UIViewController <UITableViewDelegate, UITableViewDataSource, UIWebViewDelegate>
 
 @end

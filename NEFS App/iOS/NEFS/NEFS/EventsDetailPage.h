@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Event.h"
 #import "Config.h"
+#import "CustomWebView.h"
 
 @interface EventsDetailPage : UIViewController <UIWebViewDelegate>
 

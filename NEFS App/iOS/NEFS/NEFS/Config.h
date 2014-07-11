@@ -6,6 +6,13 @@
 //  Copyright (c) 2014 Stephen Sowole. All rights reserved.
 //
 
+// NEWS TAB
+
+#define NEWS_URL @"http://nefs.herokuapp.com/newslist"
+#define NEWS_API_HEADER @"News"
+#define NO_NEWS_TEXT @"No Internet Connection"
+#define NO_ACCESS_LABEL_HEIGHT 120.0
+
 // EVENTS TAB
 
 #define CELL_HEIGHT 120//80
