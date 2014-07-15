@@ -11,6 +11,8 @@
 		DC028F7B196EF1A0006BD8DA /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = DC028F7A196EF1A0006BD8DA /* News.m */; };
 		DC028F7E196F305E006BD8DA /* CustomWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC028F7D196F305E006BD8DA /* CustomWebView.m */; };
 		DC033A2A195F24260061FC2B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC033A29195F24260061FC2B /* Images.xcassets */; };
+		DC1BAE061975775400FF972F /* Sport.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BAE051975775400FF972F /* Sport.m */; };
+		DC1BAE091975777E00FF972F /* SportsTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BAE081975777E00FF972F /* SportsTeam.m */; };
 		DC525B30195C5B720039AEE5 /* EventsDetailPage.m in Sources */ = {isa = PBXBuildFile; fileRef = DC525B2F195C5B720039AEE5 /* EventsDetailPage.m */; };
 		DCB5F8CB195A0CCA00CEA2EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB5F8CA195A0CCA00CEA2EA /* Foundation.framework */; };
 		DCB5F8CD195A0CCA00CEA2EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB5F8CC195A0CCA00CEA2EA /* CoreGraphics.framework */; };
@@ -49,6 +51,10 @@
 		DC028F7C196F305E006BD8DA /* CustomWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomWebView.h; sourceTree = "<group>"; };
 		DC028F7D196F305E006BD8DA /* CustomWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomWebView.m; sourceTree = "<group>"; };
 		DC033A29195F24260061FC2B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DC1BAE041975775400FF972F /* Sport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport.h; sourceTree = "<group>"; };
+		DC1BAE051975775400FF972F /* Sport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sport.m; sourceTree = "<group>"; };
+		DC1BAE071975777E00FF972F /* SportsTeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SportsTeam.h; sourceTree = "<group>"; };
+		DC1BAE081975777E00FF972F /* SportsTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SportsTeam.m; sourceTree = "<group>"; };
 		DC525B2E195C5B720039AEE5 /* EventsDetailPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDetailPage.h; sourceTree = "<group>"; };
 		DC525B2F195C5B720039AEE5 /* EventsDetailPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsDetailPage.m; sourceTree = "<group>"; };
 		DCB5F8C7195A0CCA00CEA2EA /* NEFS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NEFS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,8 +151,8 @@
 				DCB5F8DA195A0CCA00CEA2EA /* AppDelegate.m */,
 				DCB5F8FF195A0E9000CEA2EA /* Events */,
 				DCB5F902195A0E9F00CEA2EA /* News */,
-				DCB5F900195A0E9500CEA2EA /* Info */,
 				DCB5F901195A0E9A00CEA2EA /* Sports */,
+				DCB5F900195A0E9500CEA2EA /* Info */,
 				DCB5F910195A0F6400CEA2EA /* Help Files */,
 			);
 			path = NEFS;
@@ -209,6 +215,10 @@
 		DCB5F901195A0E9A00CEA2EA /* Sports */ = {
 			isa = PBXGroup;
 			children = (
+				DC1BAE071975777E00FF972F /* SportsTeam.h */,
+				DC1BAE081975777E00FF972F /* SportsTeam.m */,
+				DC1BAE041975775400FF972F /* Sport.h */,
+				DC1BAE051975775400FF972F /* Sport.m */,
 				DCB5F906195A0EEF00CEA2EA /* SportsTab.h */,
 				DCB5F907195A0EEF00CEA2EA /* SportsTab.m */,
 			);
@@ -335,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC1BAE061975775400FF972F /* Sport.m in Sources */,
 				DC525B30195C5B720039AEE5 /* EventsDetailPage.m in Sources */,
 				DCB5F8DB195A0CCA00CEA2EA /* AppDelegate.m in Sources */,
 				DCB5F90E195A0F4A00CEA2EA /* EventsCustomTVCell.m in Sources */,
@@ -343,6 +354,7 @@
 				DCB5F914195A102900CEA2EA /* Event.m in Sources */,
 				DC028F7E196F305E006BD8DA /* CustomWebView.m in Sources */,
 				DCB5F8D7195A0CCA00CEA2EA /* main.m in Sources */,
+				DC1BAE091975777E00FF972F /* SportsTeam.m in Sources */,
 				DCB5F90B195A0F1A00CEA2EA /* NewsTab.m in Sources */,
 				DC028F78196EF122006BD8DA /* NewsCell.m in Sources */,
 				DC028F7B196EF1A0006BD8DA /* News.m in Sources */,

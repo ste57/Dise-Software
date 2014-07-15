@@ -42,6 +42,7 @@
         [newsRead addObject:_id];
     }
 }
+
 - (void) removeBackButtonText {
     
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
@@ -133,12 +134,6 @@
         
         [self createNoInternetLabel];
         
-        if (refresh) {
-            
-            [refresh removeFromSuperview];
-            refresh = NULL;
-        }
-        
     } else {
         
         if (!refresh) {
@@ -195,7 +190,7 @@
 
 - (void) tableView:(UITableView *)table didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    News *newsObject = (News*)[newsArray objectAtIndex:indexPath.row];
+    News *newsObject = (News*)[newsArray objectAtIndex:((newsArray.count - 1) - indexPath.row)];
     
     [self goToMainSite:newsObject.nLink :newsObject.nTitle];
     
@@ -236,7 +231,7 @@
     
     NewsCell *cell = [[NewsCell alloc] initWithFrame:CGRectZero];
     
-    News *newsObject = (News*)[newsArray objectAtIndex:index.row];
+    News *newsObject = (News*)[newsArray objectAtIndex:((newsArray.count - 1) - index.row)];
     
     cell.news = newsObject;
     
