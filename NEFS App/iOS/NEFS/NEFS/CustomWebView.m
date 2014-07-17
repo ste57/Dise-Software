@@ -55,7 +55,7 @@
     label.text = self.navigationItem.title;
     
     label.textColor = [UIColor whiteColor];
-    label.font = [UIFont boldSystemFontOfSize:17];
+    label.font = [UIFont boldSystemFontOfSize:16];
     label.backgroundColor = [UIColor clearColor];
     
     label.adjustsFontSizeToFitWidth = YES;

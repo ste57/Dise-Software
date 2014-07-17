@@ -19,6 +19,7 @@
     NSMutableArray *eventsArray, *eventsAttending;
     
     BOOL dataRetrieved;
+    
     UILabel *noEventsLabel;
 }
 
@@ -49,8 +50,6 @@
     [self retrieveAttendingEvents];
     
     [self retrieveFromURL];
-    
-    [self createEventsFromData];
     
     [self sortDataIntoSections];
 }
@@ -142,7 +141,7 @@
     noEventsLabel = [[UILabel alloc] initWithFrame:CGRectMake(85.0, NO_ACCESS_LABEL_HEIGHT, 200.0, 45.0)];
     noEventsLabel.textAlignment = NSTextAlignmentLeft;
     noEventsLabel.textColor = [UIColor darkGrayColor];
-    noEventsLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:16];
+    noEventsLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:NO_ACCESS_LABEL_FONT_SIZE];
     noEventsLabel.text = NO_EVENTS_TEXT;
     
     [self.view addSubview:noEventsLabel];
@@ -212,8 +211,7 @@
 - (void) sortDataIntoSections {
     
     NSSortDescriptor *sortDescriptor;
-    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"eDate"
-                                                 ascending:YES];
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:SORT_EVENTS_BY ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
     eventsArray = (NSMutableArray*)[eventsArray sortedArrayUsingDescriptors:sortDescriptors];
 }
@@ -224,7 +222,7 @@
     
     tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, window.size.width, window.size.height) style:UITableViewStylePlain];
     
-    tableView.rowHeight = CELL_HEIGHT;
+    tableView.rowHeight = EVENTS_CELL_HEIGHT;
     
     tableView.delegate = self;
     
@@ -235,7 +233,7 @@
     [self.view addSubview:tableView];
     
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    tableView.backgroundColor = [UIColor colorWithRed:220.0/250.0 green:220.0/250.0 blue:220.0/250.0 alpha:1.0];
+    tableView.backgroundColor = [UIColor colorWithRed:BACKGROUND_GREY_SHADE/250.0 green:BACKGROUND_GREY_SHADE/250.0 blue:BACKGROUND_GREY_SHADE/250.0 alpha:1.0];
     
     if (!eventsArray.count) {
         
@@ -282,11 +280,9 @@
     
     [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
-    NSMutableArray* events = eventsArray;
-    
     EventsCustomTVCell *cell = [[EventsCustomTVCell alloc] initWithFrame:CGRectZero];
     
-    Event *event = (Event*)[events objectAtIndex:index.row];
+    Event *event = (Event*)[eventsArray objectAtIndex:index.row];
     
     cell.event = event;
     

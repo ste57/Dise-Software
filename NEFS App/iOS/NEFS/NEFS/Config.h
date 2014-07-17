@@ -6,21 +6,36 @@
 //  Copyright (c) 2014 Stephen Sowole. All rights reserved.
 //
 
+// Miscellaneous
+
+#define NO_ACCESS_LABEL_HEIGHT 120.0
+#define NO_ACCESS_LABEL_FONT_SIZE 16
+
+// SPORTS TAB
+
+#define SPORTS_URL @"http://pastebin.com/raw.php?i=Vw0dwgfC"
+#define SPORTS_API_HEADER @"Sports"
+#define SPORTS_CELL_HEIGHT 140
+
 // NEWS TAB
 
 #define NEWS_URL @"http://nefs.herokuapp.com/newslist"
 #define NEWS_API_HEADER @"News"
 #define NO_NEWS_TEXT @"No Internet Connection"
-#define NO_ACCESS_LABEL_HEIGHT 120.0
 
 // EVENTS TAB
 
-#define CELL_HEIGHT 120//80
+#define EVENTS_CELL_HEIGHT 120
 #define EVENTS_URL @"http://nefs.herokuapp.com/eventlist"
 #define EVENTS_API_HEADER @"Events"
-#define SECTION_HEADER_DATE_FORMAT @"d MMM yyyy"//@"EEEE, d MMM";
-#define ATTENDING_EVENTS @"eventsAttending"
+#define SECTION_HEADER_DATE_FORMAT @"d MMM yyyy"
 #define NO_EVENTS_TEXT @"No Upcoming Events"
+#define SORT_EVENTS_BY @"eDate"
+#define BACKGROUND_GREY_SHADE 220.0
+
+#define EVENT_TYPE_WIDTH 100
+#define EVENT_TYPE_HEIGHT 106
+#define EVENT_DATE_HEIGHT 64
 
 // Detail Event Page
 
@@ -68,12 +83,7 @@
 #define TAB_COLOUR_G 95.0
 #define TAB_COLOUR_B 184.0
 
+// Database
 
-/*#ifdef __IPHONE_6_0 // iOS6 and later
-#   define UITextAlignmentCenter    NSTextAlignmentCenter
-#   define UITextAlignmentLeft      NSTextAlignmentLeft
-#   define UITextAlignmentRight     NSTextAlignmentRight
-#   define UILineBreakModeTailTruncation     NSLineBreakByTruncatingTail
-#   define UILineBreakModeMiddleTruncation   NSLineBreakByTruncatingMiddle
-#endif*/
+#define ATTENDING_EVENTS @"eventsAttending"
 

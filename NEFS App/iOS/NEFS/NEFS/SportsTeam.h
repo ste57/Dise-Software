@@ -11,10 +11,12 @@
 @interface SportsTeam : NSObject
 
 @property (strong, nonatomic) NSString *_id;
-@property (strong, nonatomic) NSString *stName;
-@property (strong, nonatomic) NSString *stPosition;
-@property (strong, nonatomic) NSString *stWin;
-@property (strong, nonatomic) NSString *stDraw;
-@property (strong, nonatomic) NSString *stLoss;
+@property (strong, nonatomic) NSString *sSport;
+@property (strong, nonatomic) NSString *sName;
+@property (strong, nonatomic) NSString *sPosition;
+@property (strong, nonatomic) NSString *sWin;
+@property (strong, nonatomic) NSString *sDraw;
+@property (strong, nonatomic) NSString *sLoss;
+@property (strong, nonatomic) NSString *sLink;
 
 @end

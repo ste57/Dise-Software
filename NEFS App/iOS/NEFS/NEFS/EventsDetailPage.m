@@ -8,11 +8,6 @@
 
 #import "EventsDetailPage.h"
 
-#define EVENT_TYPE_WIDTH 100
-
-#define EVENT_TYPE_HEIGHT 106
-#define EVENT_DATE_HEIGHT 64
-
 @implementation EventsDetailPage {
     
     UILabel *dateLabel;

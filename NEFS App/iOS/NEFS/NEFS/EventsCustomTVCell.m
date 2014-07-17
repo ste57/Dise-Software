@@ -18,9 +18,7 @@
 #define RIGHT_SHIFT 90
 #define DATE_SHIFT 15
 
-#define EVENT_TYPE_HEIGHT 75
-
-#define EVENT_TYPE_WIDTH 100
+#define TYPE_HEIGHT 75
 
 #define SEPERATOR_HEIGHT 9
 
@@ -94,15 +92,6 @@
     
     seperator = [[UIImageView alloc] init];
     seperator.image = [UIImage imageNamed:@"Seperator"];
-
-    frame = CGRectMake(0, CELL_HEIGHT, 320, SEPERATOR_HEIGHT);
-    seperator.frame = frame;
-    
-    [self.contentView addSubview:seperator];
-    
-    
-    seperator = [[UIImageView alloc] init];
-    seperator.image = [UIImage imageNamed:@"Seperator"];
     
     frame = CGRectMake(0, 0, 320, SEPERATOR_HEIGHT);
     seperator.frame = frame;
@@ -113,7 +102,7 @@
     seperator = [[UIImageView alloc] init];
     seperator.image = [UIImage imageNamed:@"Seperator"];
     
-    frame = CGRectMake(0, 0, SEPERATOR_HEIGHT, CELL_HEIGHT);
+    frame = CGRectMake(0, 0, SEPERATOR_HEIGHT, EVENTS_CELL_HEIGHT);
     seperator.frame = frame;
     
     [self.contentView addSubview:seperator];
@@ -122,13 +111,12 @@
     seperator = [[UIImageView alloc] init];
     seperator.image = [UIImage imageNamed:@"Seperator"];
     
-    frame = CGRectMake(320-SEPERATOR_HEIGHT, 0, SEPERATOR_HEIGHT, CELL_HEIGHT);
+    frame = CGRectMake(320-SEPERATOR_HEIGHT, 0, SEPERATOR_HEIGHT, EVENTS_CELL_HEIGHT);
     seperator.frame = frame;
     
     [self.contentView addSubview:seperator];
     
     UIView *bgColorView = [[UIView alloc] init];
-    //bgColorView.backgroundColor = [UIColor colorWithRed:220.0/250.0 green:220.0/250.0 blue:220.0/250.0 alpha:1.0];
     bgColorView.backgroundColor = [UIColor colorWithRed:230.0/250.0 green:230.0/250.0 blue:230.0/250.0 alpha:1.0];
     
     [self setSelectedBackgroundView: bgColorView];
@@ -240,7 +228,7 @@
     frame = CGRectMake(boundsX + RIGHT_SHIFT, 45, 180, 25);
     timeLabel.frame = frame;
     
-    frame = CGRectMake(boundsX + RIGHT_SHIFT, EVENT_TYPE_HEIGHT, EVENT_TYPE_WIDTH, 25);
+    frame = CGRectMake(boundsX + RIGHT_SHIFT, TYPE_HEIGHT, EVENT_TYPE_WIDTH, 25);
     eventTypeLabel.frame = frame;
     
     frame = CGRectMake(boundsX + DATE_SHIFT, 25, 60, 25);
@@ -249,10 +237,10 @@
     frame = CGRectMake(boundsX + DATE_SHIFT, 55, 60, 40);
     dateLabel.frame = frame;
     
-    frame = CGRectMake(boundsX + RIGHT_SHIFT, EVENT_TYPE_HEIGHT, EVENT_TYPE_WIDTH, 25);
+    frame = CGRectMake(boundsX + RIGHT_SHIFT, TYPE_HEIGHT, EVENT_TYPE_WIDTH, 25);
     icon.frame = frame;
     
-    frame = CGRectMake(boundsX + 280, (CELL_HEIGHT/2), 8, 8);
+    frame = CGRectMake(boundsX + 280, (EVENTS_CELL_HEIGHT/2), 8, 8);
     attendIcon.frame = frame;
 }
 

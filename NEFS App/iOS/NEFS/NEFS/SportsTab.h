@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Config.h"
+#import "SportsTeam.h"
+#import "SportsCustomTVCell.h"
+#import "CustomWebView.h"
 
-@interface SportsTab : UIViewController
+@interface SportsTab : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
