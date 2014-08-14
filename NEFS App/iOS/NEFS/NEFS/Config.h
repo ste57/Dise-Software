@@ -6,14 +6,28 @@
 //  Copyright (c) 2014 Stephen Sowole. All rights reserved.
 //
 
+#define VERSION @"Version: 1.0.0"
+
 // Miscellaneous
 
 #define NO_ACCESS_LABEL_HEIGHT 120.0
 #define NO_ACCESS_LABEL_FONT_SIZE 16
+#define LINE_SPACING 4.50
+
+// INFO TAB
+
+#define INFO_URL @"http://nefs.herokuapp.com/infolist"
+#define INFO_API_HEADER @"Info"
+
+#define INFO_CATEGORIES [NSArray arrayWithObjects:@"Sponsors", @"Finance Societies", @"About NEFS", @"Send Feedback", VERSION ,nil]
+#define FINANCE_SOCIETIES [NSArray arrayWithObjects:@"Corporate Finance", @"Equity Fund", @"Research", @"Women In Finance" ,nil]
+#define SPONSOR_TYPES [NSArray arrayWithObjects:@"Platinum", @"Gold", @"Silver", @"Bronze", nil]
+
+#define INFO_ROW_HEIGHT 60.0
 
 // SPORTS TAB
 
-#define SPORTS_URL @"http://pastebin.com/raw.php?i=Vw0dwgfC"
+#define SPORTS_URL @"http://nefs.herokuapp.com/sportslist"
 #define SPORTS_API_HEADER @"Sports"
 #define SPORTS_CELL_HEIGHT 140
 
@@ -22,6 +36,9 @@
 #define NEWS_URL @"http://nefs.herokuapp.com/newslist"
 #define NEWS_API_HEADER @"News"
 #define NO_NEWS_TEXT @"No Internet Connection"
+#define SWIPE_TO_RETRY @"Swipe Down To Retry"
+#define NEWS_ROW_HEIGHT 140.0
+#define NEWS_ARTICLES @"NewsArticles"
 
 // EVENTS TAB
 
@@ -86,4 +103,16 @@
 // Database
 
 #define ATTENDING_EVENTS @"eventsAttending"
+
+// Descriptions
+
+#define ABOUT_NEFS_DESCRIPTION @"2 Oct 2013 - Mail is likely one of the first thing you set up on a fresh install of iOS, ... iOS 7 added the ability to open zip files natively, without the need for third-party apps. ... This is an alternative to tapping the back button at the top-right.by Jojo Yee - 22 Sep 2013 - Double-click your iPad's Home button to reveal the open apps on the ..... The iPad allows for adding multiple mail accounts including GMail,  ... "
+
+#define COORP_FINANCE_DESC @"coorp finance"
+
+#define EQUITY_FUND_DESC @"equity"
+
+#define RESEARCH_DESC @"Research"
+
+#define WOMEN_IN_FINANCE_DESC @"women"
 

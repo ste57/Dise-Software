@@ -280,7 +280,25 @@
     formatter.dateFormat = @"EEEE, d MMM";
     
     dateLabel.text = [NSString stringWithFormat:@"%@ @ %@ - %@",[formatter stringFromDate:date], event.eStart, event.eEnd];
+    
+    
     descriptionView.text = event.eDesc;
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    
+    paragraphStyle.lineSpacing = LINE_SPACING;
+    
+    NSString *string = descriptionView.text;
+    
+    NSDictionary *ats = @{
+                          NSFontAttributeName : [UIFont fontWithName:@"AppleSDGothicNeo-Medium" size:DESCRIPTION_FONT_SIZE],
+                          NSParagraphStyleAttributeName : paragraphStyle,
+                          };
+    
+    descriptionView.attributedText = [[NSAttributedString alloc] initWithString:string attributes:ats];
+    descriptionView.textColor = [UIColor darkGrayColor];
+    
+    
     
     [self checkIfEventIsBeingAttended];
     

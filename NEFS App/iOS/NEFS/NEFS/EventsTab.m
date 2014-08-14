@@ -33,6 +33,11 @@
     
     [self getEventsData];
     
+    if (!dataRetrieved) {
+        
+        [self refreshTable];
+    }
+    
     [self createTableView];
 }
 
@@ -115,18 +120,15 @@
     if (!dataRetrieved) {
     
         [self retrieveFromURL];
-        
     }
     
     if (tableView) {
-
-        [tableView reloadData];
+        
+        [tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
     }
 }
 
 - (void) refreshTable {
-    
-    [self retrieveAttendingEvents];
 
     [self createEventsFromData];
     
@@ -181,31 +183,9 @@
         addEvent.eStart = [dateFormatter stringFromDate:eStart];
         addEvent.eEnd = [dateFormatter stringFromDate:eEnd];
         
+        
         [eventsArray addObject:addEvent];
     }
-    
-    [self removeOldAttendingDates];
-}
-
-- (void) removeOldAttendingDates {
-    
-    NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-    
-    for (NSString *eId in eventsAttending) {
-        
-        for (Event *event in eventsArray) {
-            
-            if ([eId isEqualToString:event._id]) {
-                
-                [tempArray addObject:eId];
-            }
-        }
-    }
-    
-    eventsAttending = tempArray;
-    
-    [[NSUserDefaults standardUserDefaults] setObject:eventsAttending forKey:ATTENDING_EVENTS];
-    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void) sortDataIntoSections {

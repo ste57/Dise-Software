@@ -11,7 +11,7 @@
 @implementation SportsTab {
     
     NSMutableArray *sportsArray;
-
+    
     UITableView *tableView;
     BOOL dataRetrieved;
 }
@@ -25,6 +25,11 @@
     [self removeBackButtonText];
     
     [self getSportsData];
+    
+    if (!dataRetrieved) {
+        
+        [self refreshTable];
+    }
     
     [self createTableView];
 }
@@ -51,6 +56,7 @@
     [self.view addSubview:tableView];
     
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     tableView.backgroundColor = [UIColor colorWithRed:220.0/250.0 green:220.0/250.0 blue:220.0/250.0 alpha:1.0];
 }
 
@@ -94,13 +100,13 @@
 - (UITableViewCell*) loadDataIntoTable:(NSIndexPath *)index {
     
     [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-
+    
     SportsCustomTVCell *cell = [[SportsCustomTVCell alloc] initWithFrame:CGRectZero];
     
     SportsTeam *team = (SportsTeam*)[sportsArray objectAtIndex:index.row];
     
     cell.team = team;
-
+    
     [cell createTextData];
     
     return cell;
@@ -136,7 +142,7 @@
                 if (sportsData && !dataRetrieved) {
                     
                     dataRetrieved = YES;
-
+                    
                     [[NSUserDefaults standardUserDefaults] setObject:sportsData forKey:SPORTS];
                     [[NSUserDefaults standardUserDefaults] synchronize];
                     
@@ -171,8 +177,18 @@
         SportsTeam *addSport = [[SportsTeam alloc] init];
         
         for (NSString *header in sport) {
+            
+            if ([addSport respondsToSelector:NSSelectorFromString(header)]) {
+
+                if ([header isEqualToString:@"sDraw"] && [[sport valueForKey:header] isEqualToString:@"on"]) {
                     
-            [addSport setValue:[sport valueForKey:header] forKey:header];
+                    [addSport setValue:@"" forKey:header];
+                    
+                } else {
+                    
+                    [addSport setValue:[sport valueForKey:header] forKey:header];
+                }
+            }
         }
         
         [sportsArray addObject:addSport];

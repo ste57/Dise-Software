@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Config.h"
+#import "InfoCell.h"
+#import <MessageUI/MessageUI.h>
+#import "PlainDescriptionView.h"
+#import "FinanceSocieties.h"
+#import "SponsorPage.h"
 
-@interface InfoTab : UIViewController
+@interface InfoTab : UIViewController <UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate>
 
 @end

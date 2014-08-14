@@ -14,6 +14,10 @@
 		DC1BAE091975777E00FF972F /* SportsTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BAE081975777E00FF972F /* SportsTeam.m */; };
 		DC1BAE0C1975B55E00FF972F /* SportsCustomTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BAE0B1975B55E00FF972F /* SportsCustomTVCell.m */; };
 		DC525B30195C5B720039AEE5 /* EventsDetailPage.m in Sources */ = {isa = PBXBuildFile; fileRef = DC525B2F195C5B720039AEE5 /* EventsDetailPage.m */; };
+		DC68E90E199C887F00FC3D67 /* FinanceSocieties.m in Sources */ = {isa = PBXBuildFile; fileRef = DC68E90D199C887F00FC3D67 /* FinanceSocieties.m */; };
+		DC68E911199C889D00FC3D67 /* PlainDescriptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC68E910199C889D00FC3D67 /* PlainDescriptionView.m */; };
+		DC68E914199D305700FC3D67 /* Sponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = DC68E913199D305700FC3D67 /* Sponsor.m */; };
+		DC68E917199D311D00FC3D67 /* SponsorPage.m in Sources */ = {isa = PBXBuildFile; fileRef = DC68E916199D311D00FC3D67 /* SponsorPage.m */; };
 		DCB5F8CB195A0CCA00CEA2EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB5F8CA195A0CCA00CEA2EA /* Foundation.framework */; };
 		DCB5F8CD195A0CCA00CEA2EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB5F8CC195A0CCA00CEA2EA /* CoreGraphics.framework */; };
 		DCB5F8CF195A0CCA00CEA2EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB5F8CE195A0CCA00CEA2EA /* UIKit.framework */; };
@@ -31,6 +35,8 @@
 		DCB5F90B195A0F1A00CEA2EA /* NewsTab.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB5F90A195A0F1A00CEA2EA /* NewsTab.m */; };
 		DCB5F90E195A0F4A00CEA2EA /* EventsCustomTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB5F90D195A0F4A00CEA2EA /* EventsCustomTVCell.m */; };
 		DCB5F914195A102900CEA2EA /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB5F913195A102900CEA2EA /* Event.m */; };
+		DCF3B485199AF8F000D3FA8F /* NewsDetailPage.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF3B484199AF8F000D3FA8F /* NewsDetailPage.m */; };
+		DCF3B488199C2E5600D3FA8F /* InfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF3B487199C2E5600D3FA8F /* InfoCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,14 @@
 		DC1BAE0B1975B55E00FF972F /* SportsCustomTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SportsCustomTVCell.m; sourceTree = "<group>"; };
 		DC525B2E195C5B720039AEE5 /* EventsDetailPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDetailPage.h; sourceTree = "<group>"; };
 		DC525B2F195C5B720039AEE5 /* EventsDetailPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsDetailPage.m; sourceTree = "<group>"; };
+		DC68E90C199C887F00FC3D67 /* FinanceSocieties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinanceSocieties.h; sourceTree = "<group>"; };
+		DC68E90D199C887F00FC3D67 /* FinanceSocieties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinanceSocieties.m; sourceTree = "<group>"; };
+		DC68E90F199C889D00FC3D67 /* PlainDescriptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlainDescriptionView.h; sourceTree = "<group>"; };
+		DC68E910199C889D00FC3D67 /* PlainDescriptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlainDescriptionView.m; sourceTree = "<group>"; };
+		DC68E912199D305700FC3D67 /* Sponsor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sponsor.h; sourceTree = "<group>"; };
+		DC68E913199D305700FC3D67 /* Sponsor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sponsor.m; sourceTree = "<group>"; };
+		DC68E915199D311D00FC3D67 /* SponsorPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SponsorPage.h; sourceTree = "<group>"; };
+		DC68E916199D311D00FC3D67 /* SponsorPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SponsorPage.m; sourceTree = "<group>"; };
 		DCB5F8C7195A0CCA00CEA2EA /* NEFS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NEFS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCB5F8CA195A0CCA00CEA2EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DCB5F8CC195A0CCA00CEA2EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,6 +99,10 @@
 		DCB5F90D195A0F4A00CEA2EA /* EventsCustomTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsCustomTVCell.m; sourceTree = "<group>"; };
 		DCB5F912195A102800CEA2EA /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		DCB5F913195A102900CEA2EA /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		DCF3B483199AF8F000D3FA8F /* NewsDetailPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailPage.h; sourceTree = "<group>"; };
+		DCF3B484199AF8F000D3FA8F /* NewsDetailPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailPage.m; sourceTree = "<group>"; };
+		DCF3B486199C2E5600D3FA8F /* InfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoCell.h; sourceTree = "<group>"; };
+		DCF3B487199C2E5600D3FA8F /* InfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +129,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC68E908199C851B00FC3D67 /* Sub Pages */ = {
+			isa = PBXGroup;
+			children = (
+				DC68E90C199C887F00FC3D67 /* FinanceSocieties.h */,
+				DC68E90D199C887F00FC3D67 /* FinanceSocieties.m */,
+			);
+			name = "Sub Pages";
+			sourceTree = "<group>";
+		};
+		DC68E918199D31E800FC3D67 /* Sponsors */ = {
+			isa = PBXGroup;
+			children = (
+				DC68E912199D305700FC3D67 /* Sponsor.h */,
+				DC68E913199D305700FC3D67 /* Sponsor.m */,
+				DC68E915199D311D00FC3D67 /* SponsorPage.h */,
+				DC68E916199D311D00FC3D67 /* SponsorPage.m */,
+			);
+			name = Sponsors;
+			sourceTree = "<group>";
+		};
 		DCB5F8BE195A0CCA00CEA2EA = {
 			isa = PBXGroup;
 			children = (
@@ -206,8 +244,12 @@
 		DCB5F900195A0E9500CEA2EA /* Info */ = {
 			isa = PBXGroup;
 			children = (
+				DC68E908199C851B00FC3D67 /* Sub Pages */,
+				DC68E918199D31E800FC3D67 /* Sponsors */,
 				DCB5F903195A0EDC00CEA2EA /* InfoTab.h */,
 				DCB5F904195A0EDC00CEA2EA /* InfoTab.m */,
+				DCF3B486199C2E5600D3FA8F /* InfoCell.h */,
+				DCF3B487199C2E5600D3FA8F /* InfoCell.m */,
 			);
 			name = Info;
 			sourceTree = "<group>";
@@ -230,6 +272,8 @@
 			children = (
 				DC028F79196EF1A0006BD8DA /* News.h */,
 				DC028F7A196EF1A0006BD8DA /* News.m */,
+				DCF3B483199AF8F000D3FA8F /* NewsDetailPage.h */,
+				DCF3B484199AF8F000D3FA8F /* NewsDetailPage.m */,
 				DCB5F909195A0F1A00CEA2EA /* NewsTab.h */,
 				DCB5F90A195A0F1A00CEA2EA /* NewsTab.m */,
 				DC028F76196EF122006BD8DA /* NewsCell.h */,
@@ -241,6 +285,8 @@
 		DCB5F910195A0F6400CEA2EA /* Help Files */ = {
 			isa = PBXGroup;
 			children = (
+				DC68E90F199C889D00FC3D67 /* PlainDescriptionView.h */,
+				DC68E910199C889D00FC3D67 /* PlainDescriptionView.m */,
 				DC028F7C196F305E006BD8DA /* CustomWebView.h */,
 				DC028F7D196F305E006BD8DA /* CustomWebView.m */,
 			);
@@ -346,17 +392,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC1BAE0C1975B55E00FF972F /* SportsCustomTVCell.m in Sources */,
+				DCF3B488199C2E5600D3FA8F /* InfoCell.m in Sources */,
 				DC525B30195C5B720039AEE5 /* EventsDetailPage.m in Sources */,
 				DCB5F8DB195A0CCA00CEA2EA /* AppDelegate.m in Sources */,
 				DCB5F90E195A0F4A00CEA2EA /* EventsCustomTVCell.m in Sources */,
 				DCB5F908195A0EEF00CEA2EA /* SportsTab.m in Sources */,
+				DC68E911199C889D00FC3D67 /* PlainDescriptionView.m in Sources */,
 				DCB5F8FE195A0E8B00CEA2EA /* EventsTab.m in Sources */,
 				DCB5F914195A102900CEA2EA /* Event.m in Sources */,
+				DCF3B485199AF8F000D3FA8F /* NewsDetailPage.m in Sources */,
 				DC028F7E196F305E006BD8DA /* CustomWebView.m in Sources */,
 				DCB5F8D7195A0CCA00CEA2EA /* main.m in Sources */,
 				DC1BAE091975777E00FF972F /* SportsTeam.m in Sources */,
 				DCB5F90B195A0F1A00CEA2EA /* NewsTab.m in Sources */,
+				DC68E914199D305700FC3D67 /* Sponsor.m in Sources */,
 				DC028F78196EF122006BD8DA /* NewsCell.m in Sources */,
+				DC68E90E199C887F00FC3D67 /* FinanceSocieties.m in Sources */,
+				DC68E917199D311D00FC3D67 /* SponsorPage.m in Sources */,
 				DC028F7B196EF1A0006BD8DA /* News.m in Sources */,
 				DCB5F905195A0EDC00CEA2EA /* InfoTab.m in Sources */,
 			);

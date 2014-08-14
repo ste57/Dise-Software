@@ -24,7 +24,7 @@
         
     } else if ([eEvent isEqualToString:CAREERS_API_NAME]) {
         
-        return [UIColor colorWithRed:0.61 green:0.93 blue:0.67 alpha:1.0];
+        return [UIColor colorWithRed:0.56 green:0.81 blue:0.60 alpha:1.0];
         
     } else if ([eEvent isEqualToString:SOCIAL_API_NAME]) {
         

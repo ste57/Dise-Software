@@ -11,7 +11,7 @@
 #import "Config.h"
 #import "CustomWebView.h"
 
-@interface EventsDetailPage : UIViewController <UIWebViewDelegate>
+@interface EventsDetailPage : UIViewController
 
 @property(nonatomic,retain) Event *event;
 @property(nonatomic,retain) NSString *eId;

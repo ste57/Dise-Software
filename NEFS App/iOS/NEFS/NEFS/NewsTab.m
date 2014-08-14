@@ -8,14 +8,12 @@
 
 #import "NewsTab.h"
 
-#define ROW_HEIGHT 108.0
-
 @implementation NewsTab {
     
     UITableView *tableView;
     NSMutableArray *newsArray;
     UIRefreshControl *refresh;
-    UILabel *noInternetLabel;
+    UILabel *noInternetLabel, *retryLabel;
     
     NSMutableArray *newsRead;
 }
@@ -28,7 +26,20 @@
     
     [self removeBackButtonText];
     
+    [self getCachedNewsArticles];
+    
     [self createTableView];
+}
+
+- (void) getCachedNewsArticles {
+    
+    newsArray = (NSMutableArray*)[[NSUserDefaults standardUserDefaults] objectForKey:NEWS_ARTICLES];
+    
+    if (newsArray.count) {
+        
+        [self createNewsFromData];
+        
+    }
 }
 
 - (void) getReadNewsArticles {
@@ -51,25 +62,23 @@
 
 - (void) retrieveFromURL {
     
-    if (newsArray.count > 0) {
-        
-        newsArray = NULL;
-    }
-    
-    newsArray = [[NSMutableArray alloc] init];
-    
     NSURL *url = [[NSURL alloc] initWithString:NEWS_URL];
     
     [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-
+        
         [refresh performSelectorOnMainThread:@selector(endRefreshing) withObject:nil waitUntilDone:NO];
         
         if (!error) {
             
-            newsArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-            newsArray = [newsArray valueForKey:NEWS_API_HEADER];
+            NSArray *news = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+            news = [news valueForKey:NEWS_API_HEADER];
             
-            if (newsArray.count) {
+            if (news.count) {
+                
+                [[NSUserDefaults standardUserDefaults] setObject:news forKey:NEWS_ARTICLES];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                
+                newsArray = (NSMutableArray*)news;
                 
                 [self refreshNews];
             }
@@ -84,7 +93,9 @@
     if (newsArray.count) {
         
         [noInternetLabel performSelectorOnMainThread:@selector(removeFromSuperview) withObject:nil waitUntilDone:NO];
+        [retryLabel performSelectorOnMainThread:@selector(removeFromSuperview) withObject:nil waitUntilDone:NO];
     }
+    
     [tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
 }
 
@@ -120,21 +131,19 @@
     
     tableView.dataSource = self;
     
-    tableView.rowHeight = ROW_HEIGHT;
+    tableView.rowHeight = NEWS_ROW_HEIGHT;
     
     tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     [self.view addSubview:tableView];
     
-    tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;//UITableViewCellSeparatorStyleSingleLine;
     
     [tableView setSeparatorInset:UIEdgeInsetsZero];
     
-    if (!newsArray.count) {
-        
-        [self createNoInternetLabel];
-        
-    } else {
+    tableView.backgroundColor = [UIColor colorWithRed:BACKGROUND_GREY_SHADE/250.0 green:BACKGROUND_GREY_SHADE/250.0 blue:BACKGROUND_GREY_SHADE/250.0 alpha:1.0];
+    
+    if (newsArray.count) {
         
         if (!refresh) {
             
@@ -144,32 +153,41 @@
             
             [tableView addSubview:refresh];
         }
+        
+    } else {
+        
+        [self createNoInternetLabel];
     }
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-
-    if (!refresh) {
-        
-        refresh = [[UIRefreshControl alloc] init];
-        
-        [refresh addTarget:self action:@selector(retrieveFromURL) forControlEvents:UIControlEventValueChanged];
-        
-        [tableView addSubview:refresh];
-    }
+    
+    [self resetPullToRefresh];
     
     if (!newsArray.count) {
         
         [self retrieveFromURL];
     }
     
-    [tableView reloadData];
+    [tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
 }
 
-- (void) viewDidDisappear:(BOOL)animated {
+- (void) resetPullToRefresh {
     
-    [refresh removeFromSuperview];
+    if (refresh.isRefreshing) {
+        
+        [refresh performSelectorOnMainThread:@selector(endRefreshing) withObject:nil waitUntilDone:NO];
+    }
+    
+    [refresh performSelectorOnMainThread:@selector(removeFromSuperview) withObject:nil waitUntilDone:NO];
+    
     refresh = NULL;
+    
+    refresh = [[UIRefreshControl alloc] init];
+    
+    [refresh addTarget:self action:@selector(retrieveFromURL) forControlEvents:UIControlEventValueChanged];
+    
+    [tableView addSubview:refresh];
 }
 
 - (void) createNoInternetLabel {
@@ -181,6 +199,14 @@
     noInternetLabel.text = NO_NEWS_TEXT;
     
     [self.view addSubview:noInternetLabel];
+    
+    retryLabel = [[UILabel alloc] initWithFrame:CGRectMake(92.0, NO_ACCESS_LABEL_HEIGHT+50.0, 200.0, 40.0)];
+    retryLabel.textAlignment = NSTextAlignmentLeft;
+    retryLabel.textColor = [UIColor darkGrayColor];
+    retryLabel.font = [UIFont fontWithName:@"TrebuchetMS" size:14];
+    retryLabel.text = SWIPE_TO_RETRY;
+    
+    [self.view addSubview:retryLabel];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -190,29 +216,32 @@
 
 - (void) tableView:(UITableView *)table didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    News *newsObject = (News*)[newsArray objectAtIndex:((newsArray.count - 1) - indexPath.row)];
-    
-    [self goToMainSite:newsObject.nLink :newsObject.nTitle];
-    
     [table deselectRowAtIndexPath:indexPath animated:YES];
     
-    [newsRead addObject:newsObject._id];
-
+    NewsDetailPage *newsDetail = [[NewsDetailPage alloc] init];
+    
+    NewsCell *cell = (NewsCell*) [table cellForRowAtIndexPath:indexPath];
+    
+    News *news = cell.news;
+    
+    newsDetail.view.backgroundColor = [UIColor whiteColor];
+    
+    newsDetail.title = news.nTitle;
+    newsDetail.news = news;
+    
+    [newsDetail createTextData];
+    
+    [self.navigationController pushViewController:newsDetail animated:YES];
+    
+    News *newsObject = (News*)[newsArray objectAtIndex:((newsArray.count - 1) - indexPath.row)];
+    
+    if (![newsRead containsObject:newsObject._id]) {
+        
+        [newsRead addObject:newsObject._id];
+    }
+    
     [[NSUserDefaults standardUserDefaults] setObject:newsRead forKey:NEWS];
     [[NSUserDefaults standardUserDefaults] synchronize];
-}
-
-- (void) goToMainSite:(NSString*)link :(NSString*)title {
-    
-    CustomWebView *web = [[CustomWebView alloc] init];
-    
-    [self.navigationController pushViewController:web animated:YES];
-    
-    web.title = title;
-    
-    web.websiteLink = link;
-    
-    [web loadWebsite];
 }
 
 - (void) tableView:(UITableView *)table moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {

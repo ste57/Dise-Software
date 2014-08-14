@@ -14,5 +14,6 @@
 @property (strong, nonatomic) NSString *nTitle;
 @property (strong, nonatomic) NSString *nDesc;
 @property (strong, nonatomic) NSString *nLink;
+@property (strong, nonatomic) NSString *dateCreated;
 
 @end

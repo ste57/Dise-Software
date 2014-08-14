@@ -1,14 +1,18 @@
 //
-//  InfoTab.m
+//  FinanceSocieties.m
 //  NEFS
 //
-//  Created by Stephen Sowole on 24/06/2014.
+//  Created by Stephen Sowole on 14/08/2014.
 //  Copyright (c) 2014 Stephen Sowole. All rights reserved.
 //
 
-#import "InfoTab.h"
+#import "FinanceSocieties.h"
 
-@implementation InfoTab {
+@interface FinanceSocieties ()
+
+@end
+
+@implementation FinanceSocieties {
     
     UITableView *tableView;
     NSArray *categories;
@@ -18,7 +22,7 @@
     
     [super viewDidLoad];
     
-    categories = INFO_CATEGORIES;
+    categories = FINANCE_SOCIETIES;
     
     [self removeBackButtonText];
     
@@ -62,88 +66,40 @@
 }
 
 - (void) tableView:(UITableView *)table didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     [table deselectRowAtIndexPath:indexPath animated:YES];
+
+    PlainDescriptionView *descView = [[PlainDescriptionView alloc] init];
     
     switch (indexPath.row) {
             
         case 0:
-            [self sponsorsPage];
+            descView.title = @"Corporate Finance";
+            [descView setText:COORP_FINANCE_DESC];
             break;
-            
+        
         case 1:
-            [self financeSocietiesPage];
+            descView.title = @"Equity Fund";
+            [descView setText:EQUITY_FUND_DESC];
             break;
-            
+        
         case 2:
-            [self aboutNEFSPage];
+            descView.title = @"Research";
+            [descView setText:RESEARCH_DESC];
             break;
-            
+        
         case 3:
-            [self sendFeedback];
+            descView.title = @"Women In Finance";
+            [descView setText:WOMEN_IN_FINANCE_DESC];
             break;
             
         default:
             break;
     }
-}
-
-- (void) sponsorsPage {
     
-    SponsorPage *view = [[SponsorPage alloc] init];
     
-    view.title = @"Sponsors";
-    
-    [self.navigationController pushViewController:view animated:YES];
-}
-
-- (void) financeSocietiesPage {
-    
-    FinanceSocieties *view = [[FinanceSocieties alloc] init];
-    
-    view.title = @"Finance Societies";
-    
-    [self.navigationController pushViewController:view animated:YES];
-}
-
-- (void) aboutNEFSPage {
-    
-    PlainDescriptionView *descView = [[PlainDescriptionView alloc] init];
-    
-    descView.title = @"About NEFS";
-    
-    [descView setText:ABOUT_NEFS_DESCRIPTION];
-
     [self.navigationController pushViewController:descView animated:YES];
-}
 
-- (void) sendFeedback {
-    
-    // Email Subject
-    NSString *emailTitle = @"Feedback";
-    // Email Content
-    NSString *messageBody = @"Feedback is always appreciated :).";
-    // To address
-    NSArray *toRecipents = [NSArray arrayWithObject:@"stephensowole@hotmail.co.uk"];
-    
-    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
-    
-    mc.mailComposeDelegate = self;
-    
-    [mc setSubject:emailTitle];
-    
-    [mc setMessageBody:messageBody isHTML:NO];
-    
-    [mc setToRecipients:toRecipents];
-    
-    // Present mail view controller on screen
-    [self presentViewController:mc animated:YES completion:NULL];
-}
-
-- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
-{
-    // Close the Mail Interface
-    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void) tableView:(UITableView *)table moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
@@ -164,11 +120,8 @@
     
     [cell setTitle:[categories objectAtIndex:index.row]];
     
-    if (index.row < (categories.count - 1)) {
-        
-        [cell addArrow];
-    }
-        
+    [cell addArrow];
+    
     return cell;
 }
 

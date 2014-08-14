@@ -10,8 +10,8 @@
 #import "News.h"
 #import "Config.h"
 #import "NewsCell.h"
-#import "CustomWebView.h"
+#import "NewsDetailPage.h"
 
-@interface NewsTab : UIViewController <UITableViewDelegate, UITableViewDataSource, UIWebViewDelegate>
+@interface NewsTab : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end
