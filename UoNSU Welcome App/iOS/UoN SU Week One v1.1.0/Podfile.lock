@@ -1,0 +1,19 @@
+PODS:
+  - GoogleAnalytics-iOS-SDK (3.0.9)
+  - Reachability (3.1.1)
+  - Shimmer (1.0.1)
+  - STTwitter (0.1.4)
+
+DEPENDENCIES:
+  - GoogleAnalytics-iOS-SDK
+  - Reachability
+  - Shimmer
+  - STTwitter
+
+SPEC CHECKSUMS:
+  GoogleAnalytics-iOS-SDK: d9e198b1f955259a72886769be7377cdfcdb2250
+  Reachability: 8e9635e3cb4f98e7f825e51147f677ecc694d0e7
+  Shimmer: 35aa2a57b8fbc17f9e16706021665966fd93dbd1
+  STTwitter: 809f63f856341fdd103fbc6d9e4818d48a91be0c
+
+COCOAPODS: 0.33.1

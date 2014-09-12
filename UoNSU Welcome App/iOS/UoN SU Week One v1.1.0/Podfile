@@ -1,0 +1,6 @@
+platform :ios, "7.0"
+
+pod 'Shimmer'
+pod 'STTwitter'
+pod 'Reachability'
+pod 'GoogleAnalytics-iOS-SDK'

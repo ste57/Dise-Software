@@ -1,0 +1,748 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E5BAF3A19B42CE100786823 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5BAF3919B42CE100786823 /* CoreData.framework */; };
+		4E5BAF3C19B42D4F00786823 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5BAF3B19B42D4F00786823 /* libz.dylib */; };
+		4E5BAF3E19B42E3900786823 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5BAF3D19B42E3900786823 /* AdSupport.framework */; };
+		4E5BAF4019B42E7100786823 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5BAF3F19B42E7100786823 /* libsqlite3.dylib */; };
+		4EA0AB4C19B3DFAA00D1073D /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA0AB4B19B3DFAA00D1073D /* Accounts.framework */; };
+		4EA0AB4E19B3DFB300D1073D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA0AB4D19B3DFB300D1073D /* Social.framework */; };
+		4EA0AB5019B3DFBF00D1073D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA0AB4F19B3DFBF00D1073D /* Twitter.framework */; };
+		4EA0AB5319B3E05B00D1073D /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EA0AB5119B3E05B00D1073D /* Montserrat-Bold.ttf */; };
+		4EA0AB5419B3E05B00D1073D /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EA0AB5219B3E05B00D1073D /* Montserrat-Regular.ttf */; };
+		4EA0AB5719B3E44700D1073D /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA0AB5619B3E44700D1073D /* LoadingView.m */; };
+		71AACE57040C41119E631463 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A676637A27497EAF386756 /* libPods.a */; };
+		DC12F85419B28AC700D15019 /* UniversityMaps.m in Sources */ = {isa = PBXBuildFile; fileRef = DC12F85319B28AC700D15019 /* UniversityMaps.m */; };
+		DC3D78CD199E5B830083C001 /* EventsTab.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D78CC199E5B830083C001 /* EventsTab.m */; };
+		DC3D78D7199E5CAD0083C001 /* TwitterTab.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D78D6199E5CAD0083C001 /* TwitterTab.m */; };
+		DC3D78DA199E5CB90083C001 /* InfoTab.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D78D9199E5CB90083C001 /* InfoTab.m */; };
+		DC3D78E1199E9FF70083C001 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D78E0199E9FF70083C001 /* Event.m */; };
+		DC539875199FA2D4008ECD6E /* EventsCustomTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC539874199FA2D4008ECD6E /* EventsCustomTVCell.m */; };
+		DC6018DF19B529B800FBE5E1 /* Contacts.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6018DE19B529B800FBE5E1 /* Contacts.m */; };
+		DC6018E319B5E4EE00FBE5E1 /* HopperBuses.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6018E219B5E4EE00FBE5E1 /* HopperBuses.m */; };
+		DC6018E619B5E77600FBE5E1 /* CampusHopper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6018E519B5E77600FBE5E1 /* CampusHopper.m */; };
+		DC6018E919B5EE6900FBE5E1 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6018E819B5EE6900FBE5E1 /* CustomCell.m */; };
+		DC821C9819A2EC890092D253 /* Mockup-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC821C9719A2EC890092D253 /* Mockup-Regular.otf */; };
+		DC821C9A19A2EE280092D253 /* primer print.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC821C9919A2EE280092D253 /* primer print.ttf */; };
+		DC821C9F19A2F1640092D253 /* EventDetailPage.m in Sources */ = {isa = PBXBuildFile; fileRef = DC821C9E19A2F1640092D253 /* EventDetailPage.m */; };
+		DC830079199E0CAF004EEF71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC830078199E0CAF004EEF71 /* Foundation.framework */; };
+		DC83007B199E0CAF004EEF71 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC83007A199E0CAF004EEF71 /* CoreGraphics.framework */; };
+		DC83007D199E0CAF004EEF71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC83007C199E0CAF004EEF71 /* UIKit.framework */; };
+		DC830083199E0CAF004EEF71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC830081199E0CAF004EEF71 /* InfoPlist.strings */; };
+		DC830085199E0CAF004EEF71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC830084199E0CAF004EEF71 /* main.m */; };
+		DC830089199E0CAF004EEF71 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC830088199E0CAF004EEF71 /* AppDelegate.m */; };
+		DC83008B199E0CAF004EEF71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC83008A199E0CAF004EEF71 /* Images.xcassets */; };
+		DC830092199E0CAF004EEF71 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC830091199E0CAF004EEF71 /* XCTest.framework */; };
+		DC830093199E0CAF004EEF71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC830078199E0CAF004EEF71 /* Foundation.framework */; };
+		DC830094199E0CAF004EEF71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC83007C199E0CAF004EEF71 /* UIKit.framework */; };
+		DC83009C199E0CB0004EEF71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC83009A199E0CB0004EEF71 /* InfoPlist.strings */; };
+		DC83009E199E0CB0004EEF71 /* UoN_SU_Week_OneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC83009D199E0CB0004EEF71 /* UoN_SU_Week_OneTests.m */; };
+		DCB5283519B292660054A019 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB5283419B292660054A019 /* ImageViewController.m */; };
+		DCB5283819B328560054A019 /* PlainDescriptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB5283719B328560054A019 /* PlainDescriptionView.m */; };
+		DCDD017919A376300024D471 /* CustomWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDD017819A376300024D471 /* CustomWebView.m */; };
+		DCDFAB2019B65F31002245DE /* AllTimesForBus.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDFAB1F19B65F31002245DE /* AllTimesForBus.m */; };
+		DCF5806419A036DC00DBC2A3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF5806319A036DB00DBC2A3 /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4EA0AB4919B3CA5C00D1073D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC83006D199E0CAF004EEF71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC830074199E0CAF004EEF71;
+			remoteInfo = "UoNSU Welcome App";
+		};
+		DC830095199E0CAF004EEF71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC83006D199E0CAF004EEF71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC830074199E0CAF004EEF71;
+			remoteInfo = "UoN SU Week One";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4E5BAF3919B42CE100786823 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4E5BAF3B19B42D4F00786823 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4E5BAF3D19B42E3900786823 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		4E5BAF3F19B42E7100786823 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		4EA0AB4B19B3DFAA00D1073D /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		4EA0AB4D19B3DFB300D1073D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		4EA0AB4F19B3DFBF00D1073D /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		4EA0AB5119B3E05B00D1073D /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		4EA0AB5219B3E05B00D1073D /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		4EA0AB5519B3E44700D1073D /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		4EA0AB5619B3E44700D1073D /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		7E8E81C739E145A1BFFC6AE5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		A3A676637A27497EAF386756 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC12F85219B28AC700D15019 /* UniversityMaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversityMaps.h; sourceTree = "<group>"; };
+		DC12F85319B28AC700D15019 /* UniversityMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityMaps.m; sourceTree = "<group>"; };
+		DC3D78CB199E5B820083C001 /* EventsTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsTab.h; sourceTree = "<group>"; };
+		DC3D78CC199E5B830083C001 /* EventsTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTab.m; sourceTree = "<group>"; };
+		DC3D78CE199E5C500083C001 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		DC3D78D5199E5CAD0083C001 /* TwitterTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTab.h; sourceTree = "<group>"; };
+		DC3D78D6199E5CAD0083C001 /* TwitterTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTab.m; sourceTree = "<group>"; };
+		DC3D78D8199E5CB90083C001 /* InfoTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTab.h; sourceTree = "<group>"; };
+		DC3D78D9199E5CB90083C001 /* InfoTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTab.m; sourceTree = "<group>"; };
+		DC3D78DF199E9FF70083C001 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		DC3D78E0199E9FF70083C001 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		DC539873199FA2D4008ECD6E /* EventsCustomTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsCustomTVCell.h; sourceTree = "<group>"; };
+		DC539874199FA2D4008ECD6E /* EventsCustomTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsCustomTVCell.m; sourceTree = "<group>"; };
+		DC6018DD19B529B800FBE5E1 /* Contacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contacts.h; path = "uon su week one/Contacts.h"; sourceTree = SOURCE_ROOT; };
+		DC6018DE19B529B800FBE5E1 /* Contacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contacts.m; path = "uon su week one/Contacts.m"; sourceTree = SOURCE_ROOT; };
+		DC6018E119B5E4EE00FBE5E1 /* HopperBuses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HopperBuses.h; path = "uon su week one/HopperBuses.h"; sourceTree = SOURCE_ROOT; };
+		DC6018E219B5E4EE00FBE5E1 /* HopperBuses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HopperBuses.m; path = "uon su week one/HopperBuses.m"; sourceTree = SOURCE_ROOT; };
+		DC6018E419B5E77600FBE5E1 /* CampusHopper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CampusHopper.h; path = "uon su week one/CampusHopper.h"; sourceTree = SOURCE_ROOT; };
+		DC6018E519B5E77600FBE5E1 /* CampusHopper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CampusHopper.m; path = "uon su week one/CampusHopper.m"; sourceTree = SOURCE_ROOT; };
+		DC6018E719B5EE6900FBE5E1 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		DC6018E819B5EE6900FBE5E1 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		DC821C9719A2EC890092D253 /* Mockup-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mockup-Regular.otf"; sourceTree = "<group>"; };
+		DC821C9919A2EE280092D253 /* primer print.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "primer print.ttf"; sourceTree = "<group>"; };
+		DC821C9D19A2F1640092D253 /* EventDetailPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailPage.h; sourceTree = "<group>"; };
+		DC821C9E19A2F1640092D253 /* EventDetailPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailPage.m; sourceTree = "<group>"; };
+		DC830075199E0CAF004EEF71 /* UoNSU Welcome App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UoNSU Welcome App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC830078199E0CAF004EEF71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DC83007A199E0CAF004EEF71 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DC83007C199E0CAF004EEF71 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DC830080199E0CAF004EEF71 /* UoNSU Welcome App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UoNSU Welcome App-Info.plist"; sourceTree = "<group>"; };
+		DC830082199E0CAF004EEF71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC830084199E0CAF004EEF71 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC830086199E0CAF004EEF71 /* UoNSU Welcome App-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UoNSU Welcome App-Prefix.pch"; sourceTree = "<group>"; };
+		DC830087199E0CAF004EEF71 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DC830088199E0CAF004EEF71 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DC83008A199E0CAF004EEF71 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DC830090199E0CAF004EEF71 /* UoNSU Welcome AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UoNSU Welcome AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC830091199E0CAF004EEF71 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DC830099199E0CB0004EEF71 /* UoNSU Welcome AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UoNSU Welcome AppTests-Info.plist"; sourceTree = "<group>"; };
+		DC83009B199E0CB0004EEF71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC83009D199E0CB0004EEF71 /* UoN_SU_Week_OneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UoN_SU_Week_OneTests.m; sourceTree = "<group>"; };
+		DCB5283319B292660054A019 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		DCB5283419B292660054A019 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		DCB5283619B328550054A019 /* PlainDescriptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlainDescriptionView.h; sourceTree = "<group>"; };
+		DCB5283719B328560054A019 /* PlainDescriptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlainDescriptionView.m; sourceTree = "<group>"; };
+		DCDD017719A376300024D471 /* CustomWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomWebView.h; sourceTree = "<group>"; };
+		DCDD017819A376300024D471 /* CustomWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomWebView.m; sourceTree = "<group>"; };
+		DCDFAB1E19B65F31002245DE /* AllTimesForBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllTimesForBus.h; path = "uon su week one/AllTimesForBus.h"; sourceTree = SOURCE_ROOT; };
+		DCDFAB1F19B65F31002245DE /* AllTimesForBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllTimesForBus.m; path = "uon su week one/AllTimesForBus.m"; sourceTree = SOURCE_ROOT; };
+		DCF5806319A036DB00DBC2A3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC830072199E0CAF004EEF71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E5BAF4019B42E7100786823 /* libsqlite3.dylib in Frameworks */,
+				4E5BAF3E19B42E3900786823 /* AdSupport.framework in Frameworks */,
+				4E5BAF3C19B42D4F00786823 /* libz.dylib in Frameworks */,
+				DCF5806419A036DC00DBC2A3 /* SystemConfiguration.framework in Frameworks */,
+				4E5BAF3A19B42CE100786823 /* CoreData.framework in Frameworks */,
+				4EA0AB5019B3DFBF00D1073D /* Twitter.framework in Frameworks */,
+				4EA0AB4E19B3DFB300D1073D /* Social.framework in Frameworks */,
+				4EA0AB4C19B3DFAA00D1073D /* Accounts.framework in Frameworks */,
+				DC83007B199E0CAF004EEF71 /* CoreGraphics.framework in Frameworks */,
+				DC83007D199E0CAF004EEF71 /* UIKit.framework in Frameworks */,
+				DC830079199E0CAF004EEF71 /* Foundation.framework in Frameworks */,
+				71AACE57040C41119E631463 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC83008D199E0CAF004EEF71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC830092199E0CAF004EEF71 /* XCTest.framework in Frameworks */,
+				DC830094199E0CAF004EEF71 /* UIKit.framework in Frameworks */,
+				DC830093199E0CAF004EEF71 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC12BA3819A298DE0012C3CD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4EA0AB5119B3E05B00D1073D /* Montserrat-Bold.ttf */,
+				4EA0AB5219B3E05B00D1073D /* Montserrat-Regular.ttf */,
+				DC821C9719A2EC890092D253 /* Mockup-Regular.otf */,
+				DC821C9919A2EE280092D253 /* primer print.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		DC12F85119B28A7E00D15019 /* Sub Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DC6018E019B5E4BD00FBE5E1 /* Hopper Bus */,
+				DC12F85219B28AC700D15019 /* UniversityMaps.h */,
+				DC12F85319B28AC700D15019 /* UniversityMaps.m */,
+				DC6018DD19B529B800FBE5E1 /* Contacts.h */,
+				DC6018DE19B529B800FBE5E1 /* Contacts.m */,
+			);
+			name = "Sub Categories";
+			sourceTree = "<group>";
+		};
+		DC3D78D1199E5C570083C001 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				DC3D78DF199E9FF70083C001 /* Event.h */,
+				DC3D78E0199E9FF70083C001 /* Event.m */,
+				DC3D78CB199E5B820083C001 /* EventsTab.h */,
+				DC3D78CC199E5B830083C001 /* EventsTab.m */,
+				DC821C9D19A2F1640092D253 /* EventDetailPage.h */,
+				DC821C9E19A2F1640092D253 /* EventDetailPage.m */,
+				DC539873199FA2D4008ECD6E /* EventsCustomTVCell.h */,
+				DC539874199FA2D4008ECD6E /* EventsCustomTVCell.m */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
+		DC3D78D3199E5C770083C001 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				DC3D78D5199E5CAD0083C001 /* TwitterTab.h */,
+				DC3D78D6199E5CAD0083C001 /* TwitterTab.m */,
+			);
+			name = Twitter;
+			sourceTree = "<group>";
+		};
+		DC3D78D4199E5C790083C001 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				DC3D78D8199E5CB90083C001 /* InfoTab.h */,
+				DC3D78D9199E5CB90083C001 /* InfoTab.m */,
+				DC12F85119B28A7E00D15019 /* Sub Categories */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
+		DC6018E019B5E4BD00FBE5E1 /* Hopper Bus */ = {
+			isa = PBXGroup;
+			children = (
+				DC6018E119B5E4EE00FBE5E1 /* HopperBuses.h */,
+				DC6018E219B5E4EE00FBE5E1 /* HopperBuses.m */,
+				DC6018E419B5E77600FBE5E1 /* CampusHopper.h */,
+				DC6018E519B5E77600FBE5E1 /* CampusHopper.m */,
+				DC6018E719B5EE6900FBE5E1 /* CustomCell.h */,
+				DC6018E819B5EE6900FBE5E1 /* CustomCell.m */,
+				DCDFAB1E19B65F31002245DE /* AllTimesForBus.h */,
+				DCDFAB1F19B65F31002245DE /* AllTimesForBus.m */,
+			);
+			name = "Hopper Bus";
+			sourceTree = "<group>";
+		};
+		DC83006C199E0CAF004EEF71 = {
+			isa = PBXGroup;
+			children = (
+				DC83007E199E0CAF004EEF71 /* UoN SU Week One */,
+				DC830097199E0CAF004EEF71 /* UoN SU Week OneTests */,
+				DC830077199E0CAF004EEF71 /* Frameworks */,
+				DC830076199E0CAF004EEF71 /* Products */,
+				7E8E81C739E145A1BFFC6AE5 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		DC830076199E0CAF004EEF71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC830075199E0CAF004EEF71 /* UoNSU Welcome App.app */,
+				DC830090199E0CAF004EEF71 /* UoNSU Welcome AppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC830077199E0CAF004EEF71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E5BAF3F19B42E7100786823 /* libsqlite3.dylib */,
+				4E5BAF3D19B42E3900786823 /* AdSupport.framework */,
+				4E5BAF3B19B42D4F00786823 /* libz.dylib */,
+				4E5BAF3919B42CE100786823 /* CoreData.framework */,
+				4EA0AB4F19B3DFBF00D1073D /* Twitter.framework */,
+				4EA0AB4D19B3DFB300D1073D /* Social.framework */,
+				4EA0AB4B19B3DFAA00D1073D /* Accounts.framework */,
+				DCF5806319A036DB00DBC2A3 /* SystemConfiguration.framework */,
+				DC830078199E0CAF004EEF71 /* Foundation.framework */,
+				DC83007A199E0CAF004EEF71 /* CoreGraphics.framework */,
+				DC83007C199E0CAF004EEF71 /* UIKit.framework */,
+				DC830091199E0CAF004EEF71 /* XCTest.framework */,
+				A3A676637A27497EAF386756 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC83007E199E0CAF004EEF71 /* UoN SU Week One */ = {
+			isa = PBXGroup;
+			children = (
+				DC3D78CE199E5C500083C001 /* Config.h */,
+				DC830087199E0CAF004EEF71 /* AppDelegate.h */,
+				DC830088199E0CAF004EEF71 /* AppDelegate.m */,
+				4EA0AB5519B3E44700D1073D /* LoadingView.h */,
+				4EA0AB5619B3E44700D1073D /* LoadingView.m */,
+				DC3D78D1199E5C570083C001 /* Events */,
+				DC3D78D3199E5C770083C001 /* Twitter */,
+				DC3D78D4199E5C790083C001 /* Info */,
+				DCDD017A19A376390024D471 /* Help Files */,
+				DC83008A199E0CAF004EEF71 /* Images.xcassets */,
+				DC12BA3819A298DE0012C3CD /* Fonts */,
+				DC83007F199E0CAF004EEF71 /* Supporting Files */,
+			);
+			path = "UoN SU Week One";
+			sourceTree = "<group>";
+		};
+		DC83007F199E0CAF004EEF71 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC830080199E0CAF004EEF71 /* UoNSU Welcome App-Info.plist */,
+				DC830081199E0CAF004EEF71 /* InfoPlist.strings */,
+				DC830084199E0CAF004EEF71 /* main.m */,
+				DC830086199E0CAF004EEF71 /* UoNSU Welcome App-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC830097199E0CAF004EEF71 /* UoN SU Week OneTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC83009D199E0CB0004EEF71 /* UoN_SU_Week_OneTests.m */,
+				DC830098199E0CB0004EEF71 /* Supporting Files */,
+			);
+			path = "UoN SU Week OneTests";
+			sourceTree = "<group>";
+		};
+		DC830098199E0CB0004EEF71 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC830099199E0CB0004EEF71 /* UoNSU Welcome AppTests-Info.plist */,
+				DC83009A199E0CB0004EEF71 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCDD017A19A376390024D471 /* Help Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCB5283619B328550054A019 /* PlainDescriptionView.h */,
+				DCB5283719B328560054A019 /* PlainDescriptionView.m */,
+				DCDD017719A376300024D471 /* CustomWebView.h */,
+				DCDD017819A376300024D471 /* CustomWebView.m */,
+				DCB5283319B292660054A019 /* ImageViewController.h */,
+				DCB5283419B292660054A019 /* ImageViewController.m */,
+			);
+			name = "Help Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC830074199E0CAF004EEF71 /* UoNSU Welcome App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC8300A1199E0CB0004EEF71 /* Build configuration list for PBXNativeTarget "UoNSU Welcome App" */;
+			buildPhases = (
+				F150D479AFE248BBBA005916 /* Check Pods Manifest.lock */,
+				DC830071199E0CAF004EEF71 /* Sources */,
+				DC830072199E0CAF004EEF71 /* Frameworks */,
+				DC830073199E0CAF004EEF71 /* Resources */,
+				CC1F4EC3E7F64DB9B563F259 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UoNSU Welcome App";
+			productName = "UoN SU Week One";
+			productReference = DC830075199E0CAF004EEF71 /* UoNSU Welcome App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC83008F199E0CAF004EEF71 /* UoNSU Welcome AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC8300A4199E0CB0004EEF71 /* Build configuration list for PBXNativeTarget "UoNSU Welcome AppTests" */;
+			buildPhases = (
+				DC83008C199E0CAF004EEF71 /* Sources */,
+				DC83008D199E0CAF004EEF71 /* Frameworks */,
+				DC83008E199E0CAF004EEF71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC830096199E0CAF004EEF71 /* PBXTargetDependency */,
+				4EA0AB4A19B3CA5C00D1073D /* PBXTargetDependency */,
+			);
+			name = "UoNSU Welcome AppTests";
+			productName = "UoN SU Week OneTests";
+			productReference = DC830090199E0CAF004EEF71 /* UoNSU Welcome AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC83006D199E0CAF004EEF71 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Stephen Sowole";
+				TargetAttributes = {
+					DC830074199E0CAF004EEF71 = {
+						DevelopmentTeam = 49MJRZBUY4;
+					};
+					DC83008F199E0CAF004EEF71 = {
+						TestTargetID = DC830074199E0CAF004EEF71;
+					};
+				};
+			};
+			buildConfigurationList = DC830070199E0CAF004EEF71 /* Build configuration list for PBXProject "UoNSU Welcome App" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				de,
+			);
+			mainGroup = DC83006C199E0CAF004EEF71;
+			productRefGroup = DC830076199E0CAF004EEF71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC830074199E0CAF004EEF71 /* UoNSU Welcome App */,
+				DC83008F199E0CAF004EEF71 /* UoNSU Welcome AppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC830073199E0CAF004EEF71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EA0AB5419B3E05B00D1073D /* Montserrat-Regular.ttf in Resources */,
+				4EA0AB5319B3E05B00D1073D /* Montserrat-Bold.ttf in Resources */,
+				DC830083199E0CAF004EEF71 /* InfoPlist.strings in Resources */,
+				DC821C9A19A2EE280092D253 /* primer print.ttf in Resources */,
+				DC83008B199E0CAF004EEF71 /* Images.xcassets in Resources */,
+				DC821C9819A2EC890092D253 /* Mockup-Regular.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC83008E199E0CAF004EEF71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC83009C199E0CB0004EEF71 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CC1F4EC3E7F64DB9B563F259 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F150D479AFE248BBBA005916 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC830071199E0CAF004EEF71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6018E619B5E77600FBE5E1 /* CampusHopper.m in Sources */,
+				DCB5283519B292660054A019 /* ImageViewController.m in Sources */,
+				DC821C9F19A2F1640092D253 /* EventDetailPage.m in Sources */,
+				DCDFAB2019B65F31002245DE /* AllTimesForBus.m in Sources */,
+				DC3D78DA199E5CB90083C001 /* InfoTab.m in Sources */,
+				DC6018E319B5E4EE00FBE5E1 /* HopperBuses.m in Sources */,
+				DCDD017919A376300024D471 /* CustomWebView.m in Sources */,
+				DC12F85419B28AC700D15019 /* UniversityMaps.m in Sources */,
+				DC539875199FA2D4008ECD6E /* EventsCustomTVCell.m in Sources */,
+				DC830089199E0CAF004EEF71 /* AppDelegate.m in Sources */,
+				DC3D78D7199E5CAD0083C001 /* TwitterTab.m in Sources */,
+				DC6018DF19B529B800FBE5E1 /* Contacts.m in Sources */,
+				DC3D78CD199E5B830083C001 /* EventsTab.m in Sources */,
+				DC830085199E0CAF004EEF71 /* main.m in Sources */,
+				4EA0AB5719B3E44700D1073D /* LoadingView.m in Sources */,
+				DCB5283819B328560054A019 /* PlainDescriptionView.m in Sources */,
+				DC3D78E1199E9FF70083C001 /* Event.m in Sources */,
+				DC6018E919B5EE6900FBE5E1 /* CustomCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC83008C199E0CAF004EEF71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC83009E199E0CB0004EEF71 /* UoN_SU_Week_OneTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EA0AB4A19B3CA5C00D1073D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC830074199E0CAF004EEF71 /* UoNSU Welcome App */;
+			targetProxy = 4EA0AB4919B3CA5C00D1073D /* PBXContainerItemProxy */;
+		};
+		DC830096199E0CAF004EEF71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC830074199E0CAF004EEF71 /* UoNSU Welcome App */;
+			targetProxy = DC830095199E0CAF004EEF71 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC830081199E0CAF004EEF71 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC830082199E0CAF004EEF71 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DC83009A199E0CB0004EEF71 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC83009B199E0CB0004EEF71 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC83009F199E0CB0004EEF71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DC8300A0199E0CB0004EEF71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC8300A2199E0CB0004EEF71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E8E81C739E145A1BFFC6AE5 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UoN SU Week One/UoNSU Welcome App-Prefix.pch";
+				INFOPLIST_FILE = "UoN SU Week One/UoNSU Welcome App-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "UoNSU Welcome App";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DC8300A3199E0CB0004EEF71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E8E81C739E145A1BFFC6AE5 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UoN SU Week One/UoNSU Welcome App-Prefix.pch";
+				INFOPLIST_FILE = "UoN SU Week One/UoNSU Welcome App-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "UoNSU Welcome App";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DC8300A5199E0CB0004EEF71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UoN SU Week One/UoNSU Welcome App-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "UoN SU Week OneTests/UoNSU Welcome AppTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/tosin/Dropbox/books/UoN,
+					SU,
+					Week,
+					One,
+					"-",
+					Tosin,
+				);
+				PRODUCT_NAME = "UoNSU Welcome AppTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UoNSU Welcome App.app/UoNSU Welcome App";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DC8300A6199E0CB0004EEF71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UoN SU Week One/UoNSU Welcome App-Prefix.pch";
+				INFOPLIST_FILE = "UoN SU Week OneTests/UoNSU Welcome AppTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/tosin/Dropbox/books/UoN,
+					SU,
+					Week,
+					One,
+					"-",
+					Tosin,
+				);
+				PRODUCT_NAME = "UoNSU Welcome AppTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UoNSU Welcome App.app/UoNSU Welcome App";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC830070199E0CAF004EEF71 /* Build configuration list for PBXProject "UoNSU Welcome App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC83009F199E0CB0004EEF71 /* Debug */,
+				DC8300A0199E0CB0004EEF71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC8300A1199E0CB0004EEF71 /* Build configuration list for PBXNativeTarget "UoNSU Welcome App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC8300A2199E0CB0004EEF71 /* Debug */,
+				DC8300A3199E0CB0004EEF71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC8300A4199E0CB0004EEF71 /* Build configuration list for PBXNativeTarget "UoNSU Welcome AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC8300A5199E0CB0004EEF71 /* Debug */,
+				DC8300A6199E0CB0004EEF71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC83006D199E0CAF004EEF71 /* Project object */;
+}
